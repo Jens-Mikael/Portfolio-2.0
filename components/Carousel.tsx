@@ -71,7 +71,7 @@ const Carousel = () => {
 
                 <div className="flex gap-2 flex-wrap">
                   {projectsData[count % 4].tools.map((tool) => (
-                    <div className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm font-normal text-indigo-500">
+                    <div key={tool} className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm font-normal text-indigo-500">
                       {tool}
                     </div>
                   ))}

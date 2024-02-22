@@ -60,7 +60,10 @@ const ProjectPage = () => {
             </div>
             <div className="flex gap-2">
               {projectsData[project].tools.map((tool) => (
-                <div className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm text-indigo-500">
+                <div
+                  key={tool}
+                  className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm text-indigo-500"
+                >
                   {tool}
                 </div>
               ))}
