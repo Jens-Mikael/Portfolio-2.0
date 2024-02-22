@@ -95,6 +95,11 @@ const ProjectPage = () => {
               </Link>
             )}
           </div>
+          <div className="p-10 text-5xl font-bold">J
+            <TextGradient color="from-indigo-500 to-purple-500 ">
+              S
+            </TextGradient>
+          </div>
         </div>
       </div>
       <Footer />
