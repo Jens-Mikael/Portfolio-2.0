@@ -10,18 +10,17 @@ const Navbar = () => {
     <div className="fixed inset-x-0 z-20 ">
       <div className="realtive flex items-center justify-center bg-black/40">
         <div className="absolute hidden text-sm md:block">
-            <NavbarNav />
-          
+          <NavbarNav />
         </div>
         <div className="flex h-full w-full justify-between px-5 py-4 sm:px-7 md:px-12 lg:px-16 xl:px-24">
           {/* LOGO */}
           <div className="font-bold">
-            <span className="inline md:hidden lg:inline">d-dfg</span>
+            <span className="inline md:hidden lg:inline">Jens-Mikael</span>
             <span className="hidden md:inline lg:hidden">J-M</span>
 
             <TextGradient color="from-indigo-500 to-purple-500">
               {" "}
-              fdfdfg
+              Stjernberg
             </TextGradient>
           </div>
 

@@ -7,6 +7,7 @@ const elementIds = ["home", "portfolio", "about", "services", "contact"];
 
 const NavbarNav = () => {
   const pathname = usePathname();
+  console.log()
   const [elementInView, setElementInView] = useState("");
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -25,25 +26,25 @@ const NavbarNav = () => {
         Home
       </Link>
       <Link
-        href="#portfolio"
-        className={`${pathname !== "/portfolio" && elementInView !== "portfolio" && "opacity-60"} transition-opacity`}
+        href="/#portfolio"
+        className={`${!pathname.includes("portfolio") && elementInView !== "portfolio" && "opacity-60"} transition-opacity`}
       >
         Portfolio
       </Link>
       <Link
-        href="#about"
+        href="/#about"
         className={`${pathname !== "/about" && elementInView !== "about" && "opacity-60"} transition-opacity`}
       >
         About
       </Link>
       <Link
-        href="#services"
+        href="/#services"
         className={`${elementInView !== "services" && "opacity-60"} transition-opacity`}
       >
         Services
       </Link>
       <Link
-        href="#contact"
+        href="/#contact"
         className={`${elementInView !== "contact" && "opacity-60"} transition-opacity`}
       >
         Contact
@@ -53,7 +54,7 @@ const NavbarNav = () => {
       <div
         className={`absolute -bottom-2 hidden h-1 rounded-full bg-indigo-600 transition-all md:block 
         ${elementInView === "home" && " w-10"} 
-        ${(pathname === "/portfolio" || elementInView === "portfolio") && "w-14 translate-x-[79px]"} 
+        ${(pathname.includes("portfolio") || elementInView === "portfolio") && "w-14 translate-x-[79px]"} 
         ${(pathname === "/about" || elementInView === "about") && "w-10 translate-x-[173px]"} 
         ${elementInView === "services" && "w-[58px] translate-x-[252px]"} 
         ${elementInView === "contact" && "w-14 translate-x-[347px]"}`}

@@ -7,21 +7,22 @@ import MobileTap from "./MobileTap";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import useMeasure from "react-use-measure";
+import Link from "next/link";
 
 const Carousel = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1000);
   const previous = usePrevious(count);
   const [ref, { width }] = useMeasure();
   const direction = count > previous! ? 1 : -1;
 
   return (
-    <div className="flex flex-1 flex-col justify-between ">
+    <div className="flex flex-1 flex-col justify-between">
       {/* PROJECT PRESENTATION */}
       <div
         ref={ref}
-        className="relative flex flex-1 items-center justify-center overflow-hidden"
+        className="relative flex flex-1 items-center justify-center overflow-x-hidden"
       >
-        <AnimatePresence custom={{ direction, width }}>
+        <AnimatePresence custom={{ direction, width }} mode="popLayout">
           <motion.div
             key={count}
             variants={variants}
@@ -29,7 +30,7 @@ const Carousel = () => {
             animate="center"
             exit="exit"
             custom={{ direction, width }}
-            className="absolute flex w-full flex-col items-center justify-center gap-6 px-10 md:flex-row md:items-start md:gap-2 "
+            className="flex w-full flex-col items-center justify-center gap-6 px-10 md:flex-row md:items-start md:gap-2"
           >
             <div className="xs:hidden block">
               <Laptop src={projectsData[count % 4].img} width={300} />
@@ -67,15 +68,26 @@ const Carousel = () => {
                     {" </>"}
                   </TextGradient>
                 </div>
+
+                <div className="flex gap-2 flex-wrap">
+                  {projectsData[count % 4].tools.map((tool) => (
+                    <div className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm font-normal text-indigo-500">
+                      {tool}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="flex w-fit cursor-pointer items-center gap-1 self-end text-xs group">
+              <Link
+                href={`/portfolio/${count % 4}`}
+                className="group flex w-fit cursor-pointer items-center gap-1 self-end text-xs"
+              >
                 Read More{" "}
                 <SVG
                   src="/svg/arrow.svg"
-                  className="h-5 w-5 fill-indigo-500 group-hover:translate-x-1 transition-all"
+                  className="h-5 w-5 fill-indigo-500 transition-all group-hover:translate-x-1"
                   loader={<div className="h-5 w-5" />}
                 />
-              </div>
+              </Link>
             </div>
           </motion.div>
         </AnimatePresence>

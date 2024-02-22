@@ -2,16 +2,17 @@ import Image from "next/image";
 import SVG from "react-inlinesvg";
 import MobileTap from "../components/MobileTap";
 import TextGradient from "../components/TextGradient";
-import { servicesData, skillsData } from "@/data";
+import { CVData, aboutData, servicesData, skillsData } from "@/data";
 import Carousel from "@/components/Carousel";
 import ServiceBlock from "@/components/ServiceBlock";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 const Home = () => (
   <div className="min-h-screen">
     {/* INTRO PAGE */}
     <div
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-7 text-center dark:bg-[#16151D] dark:text-white"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#16151D] px-7 text-center text-white"
     >
       {/* BG ICONS */}
       {/* <SVG src="/svg/dotted-ball.svg" className="fill-[#00D2BA] h-1/2 w-1/2 absolute top-[-100px] right-[-250px]" /> */}
@@ -49,7 +50,7 @@ const Home = () => (
         <div className="">
           <Image
             alt="pfp"
-            src="/images/pfpp.jpg"
+            src="/images/pfp.jpg"
             height={120}
             width={120}
             className=" mb-5 rounded-full"
@@ -58,16 +59,14 @@ const Home = () => (
         <div className="text-3xl font-bold">
           Hi, I'm
           <TextGradient color="from-indigo-500 to-purple-500">
-            {" wedwedwed< />"}
+            {" <Jens-Mikael Stjernberg />"}
           </TextGradient>
         </div>
         <div className="w-full max-w-md font-extralight">
           <TextGradient color="from-indigo-500 to-purple-500">
             {"<> "}
           </TextGradient>{" "}
-          I'm a software developer who specializes in building the web. I'm
-          lookin forward to develop my skills in the field and contributing to
-          meaningful projects.
+          {aboutData.shortDesc}
           <TextGradient color="from-indigo-500 to-purple-500">
             {" </>"}
           </TextGradient>
@@ -108,7 +107,10 @@ const Home = () => (
     </div>
 
     {/* PORTFOLIO PAGE */}
-    <div id="portfolio" className="flex min-h-screen flex-col bg-[#1C1F23]">
+    <div
+      id="portfolio"
+      className="flex h-full min-h-screen flex-col bg-[#1C1F23]"
+    >
       <div className="flex flex-col gap-3 p-10 md:p-20">
         <div className="text-xs">Checkout My Portfolio</div>
         <div className="text-3xl font-bold">
@@ -120,7 +122,7 @@ const Home = () => (
       </div>
       <Carousel />
 
-      <div className="mt-10 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
+      <div className="mt-5 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
         About Me
         <SVG
           src="/svg/arrow.svg"
@@ -139,7 +141,7 @@ const Home = () => (
           <div className="hidden h-[300px] w-[300px] md:block">
             <Image
               alt="gtr"
-              src="/images/guitarr.png"
+              src="/images/guitar.png"
               width={0}
               height={0}
               sizes="100vh"
@@ -151,9 +153,9 @@ const Home = () => (
             <div className="flex flex-col gap-3">
               <div className="text-xs">About me</div>
               <div className="text-3xl font-bold">
-                wedwed-wedwed{" "}
+                Jens-Mikael{" "}
                 <TextGradient color="from-indigo-500 to-purple-500">
-                  wedwed
+                  Stjernberg
                 </TextGradient>
               </div>
             </div>
@@ -162,29 +164,14 @@ const Home = () => (
               <TextGradient color="from-indigo-500 to-purple-500">
                 {"<> "}
               </TextGradient>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              mauris ligula, porttitor sed ullamcorper ut, varius sed lorem. Nam
-              maximus egestas sapien eget scelerisque. Cras id lorem
-              pellentesque, malesuada nulla a, consectetur lorem. Sed bibendum
-              erat quis dui lacinia accumsan. Fusce sed lectus rhoncus metus
-              consectetur tristique. Suspendisse eu leo odio. Donec eget metus
-              vitae tortor eleifend accumsan sit amet at elit. Maecenas placerat
-              tincidunt nisl vitae gravida. Nulla facilisi.
+              {aboutData.longDesc1}
+              <br />
+              <br />
+              {aboutData.longDesc2}
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
             </div>
-            {/* LEARN MORE */}
-            <MobileTap className="group flex w-fit items-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
-              Learn more{" "}
-              <Image
-                src="/svg/arrow.svg"
-                alt="ar"
-                height={20}
-                width={20}
-                className="transition-transform group-hover:translate-x-2"
-              />
-            </MobileTap>
           </div>
         </div>
         {/* __________*/}
@@ -205,38 +192,28 @@ const Home = () => (
             <div className="flex flex-1 flex-col gap-10">
               <div className="text-2xl font-bold">Education</div>
               <div>
-                <CVBlock
-                  title="High School - BJSS"
-                  date="2023 - Now"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris
-          ligula, porttitor sed ullamcorper ut, varius sed lorem"
-                />
-                <CVBlock
-                  isLast
-                  title="Primary School - BJSS"
-                  date="2023 - Now"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris
-          ligula, porttitor sed ullamcorper ut, varius sed lorem"
-                />
+                {CVData.education.map((obj, i) => (
+                  <CVBlock
+                    title={obj.title}
+                    date={obj.date}
+                    desc={obj.desc}
+                    isLast={CVData.education.length - 1 === i}
+                  />
+                ))}
               </div>
             </div>
             {/* EXPERIENCE */}
             <div className="flex flex-1 flex-col gap-10">
               <div className="text-2xl font-bold">Experience</div>
               <div>
-                <CVBlock
-                  title="Shop Employee - SOK"
-                  date="2023 - Now"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris
-          ligula, porttitor sed ullamcorper ut, varius sed lorem"
-                />
-                <CVBlock
-                  isLast
-                  title="Shop Employee - SOK"
-                  date="2023 - Now"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mauris
-          ligula, porttitor sed ullamcorper ut, varius sed lorem"
-                />
+                {CVData.experience.map((obj, i) => (
+                  <CVBlock
+                    title={obj.title}
+                    date={obj.date}
+                    desc={obj.desc}
+                    isLast={CVData.experience.length - 1 === i}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -278,11 +255,12 @@ const Home = () => (
 
         {/* CONTENT */}
         <div className="flex flex-col gap-5 lg:flex-row">
-          {servicesData.map((service) => (
+          {servicesData.map((service, key) => (
             <ServiceBlock
               title={service.title}
               desc={service.desc}
               category={service.category}
+              key={key}
             />
           ))}
         </div>
@@ -320,15 +298,14 @@ const Home = () => (
               <TextGradient color="from-indigo-500 to-purple-500">
                 {"<> "}
               </TextGradient>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              mauris ligula, porttitor sed ullamcorper ut, varius sed lorem. Nam
-              maximus egestas sapien eget scelerisque. Cras id lorem
-              pellentesque, malesuada nulla a, consectetur lorem. Sed bibendum
-              erat quis dui lacinia accumsan.
+              I am open to any sorts of freelance job offers. Due to me being
+              still in high school, my free time is limited and I only accept
+              offers related to freelancing where I can grow and offer quality
+              work
               <br />
               <br />
-              Have an exiting project you need help with? Send me an email or
-              contact me via Whatsapp! I'll be happy to hear from you!
+              Anyhow, have an exiting project you need help with? Send me an
+              email or contact me via Whatsapp! I'll be happy to hear from you!
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
@@ -364,89 +341,7 @@ const Home = () => (
       </div>
 
       {/* FOOTER */}
-      <div className="xs:p-10 xs:pb-7 xs:gap-7 flex flex-col items-center justify-center gap-5 border-t border-white/50 bg-gradient-to-r from-violet-600 via-indigo-500 to-indigo-600 p-5">
-        <div className="xs:gap-10 grid grid-cols-2 gap-5 sm:grid-cols-4">
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="text-sm font-bold">ABOUT ME</div>
-            <div className="text-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              mauris ligula, porttitor sed ullamcorper ut, varius sed lorem
-            </div>
-          </div>
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="text-sm font-bold">SERVICES</div>
-            <div className="flex flex-col gap-1 text-xs">
-              <div>Frontend Development</div>
-              <div>Backend Development</div>
-              <div>Design Replication</div>
-            </div>
-          </div>
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="text-sm font-bold">NAVIGATION</div>
-            <div className="flex w-fit flex-col gap-1 text-xs">
-              <Link className="hover:underline" href="#home">
-                Home
-              </Link>
-              <Link className="hover:underline" href="#portfolio">
-                Portfolio
-              </Link>
-              <Link className="hover:underline" href="#about">
-                About
-              </Link>
-              <Link className="hover:underline" href="#services">
-                Services
-              </Link>
-              <Link className="hover:underline" href="#contact">
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="text-sm font-bold">CONTACT</div>
-            <div className="flex flex-col gap-1 text-xs">
-              <Link
-                href="https://www.google.com/maps/place/pori"
-                className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
-              >
-                <SVG
-                  src="/svg/location.svg"
-                  className="h-4 w-4 fill-white"
-                  loader={<div className="h-4 w-4" />}
-                />
-                Pori, Finland
-              </Link>
-              <Link
-                href="mailto:jensmikael.stjernberg@gmail.com"
-                className="flex cursor-pointer items-center gap-1 break-words hover:underline"
-              >
-                <SVG
-                  className="h-4 min-h-4 w-4 min-w-4 fill-white"
-                  src="/svg/mail.svg"
-                  loader={<div className="h-4 min-h-4 w-4 min-w-4" />}
-                />
-                <div className="w-full break-words">
-                  jensmikael.stjernberg@gmail.com
-                </div>
-              </Link>
-              <Link
-                href="tel:+358407676993"
-                className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
-              >
-                <SVG
-                  className="h-4 w-4 fill-white"
-                  src="/svg/phone.svg"
-                  loader={<div className="h-4 w-4" />}
-                />
-                +358 40 7676 993
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="w-full border-t border-white/50" />
-        <div className="text-xs font-medium text-white/70">
-          Built with Passion & Commitment © Copyright 2024. All Rights Reserved{" "}
-        </div>
-      </div>
+      <Footer />
     </div>
   </div>
 );
@@ -465,7 +360,7 @@ const CVBlock = ({
   <div className="flex gap-5">
     <div>
       <div>
-        <div className="whitespace-nowrap  rounded-lg bg-indigo-500 px-6 py-3 text-sm">
+        <div className="w-[130px] whitespace-nowrap rounded-lg bg-indigo-500 px-6 py-3 text-center text-sm">
           {date}
         </div>
       </div>
@@ -475,7 +370,7 @@ const CVBlock = ({
       <div className="min-h-3 min-w-3 rounded-full bg-indigo-500" />
       <div className="h-full border-l-[1.5px] border-white/40" />
     </div>
-    <div className={`${!isLast && "mb-14"} flex flex-col gap-7`}>
+    <div className={`${!isLast && "mb-14"} flex w-full flex-col gap-7`}>
       <div className="flex flex-col gap-3 rounded-xl border border-white/20 bg-white/5 p-5">
         <div className="text-lg font-medium">{title}</div>
         <div className="text-sm font-light">{desc}</div>

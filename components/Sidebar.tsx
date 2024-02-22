@@ -14,7 +14,7 @@ const Sidebar = () => {
     <>
       {/* HAM BUTTON */}
       <MobileTap onClick={() => setSidebarOpen(true)} className="md:hidden">
-        <SVG src="/svg/menu.svg" className="h-6 w-6 fill-white" />
+        <SVG src="/svg/menu.svg" className="h-6 w-6 fill-white" loader={<div className="h-6 w-6" />} />
       </MobileTap>
 
       {/* SIDEBAR */}
