@@ -26,14 +26,14 @@ const Navbar = () => {
 
           {/* MEDIA AND HAM */}
           <div className="flex items-center gap-5">
-            <Link href={"https://github.com/Jens-Mikael"}>
-              <Image alt="li" src="/svg/linkedin.svg" height={20} width={20} />
-            </Link>
             <Link
               href={
-                "https://www.linkedin.com/in/jens-mikael-stjernberg-072938278/"
+                "https://github.com/Jens-Mikaelhttps://www.linkedin.com/in/jens-mikael-stjernberg-072938278/"
               }
             >
+              <Image alt="li" src="/svg/linkedin.svg" height={20} width={20} />
+            </Link>
+            <Link href={"https://github.com/Jens-Mikael"}>
               <Image alt="li" src="/svg/github.svg" height={20} width={20} />
             </Link>
             <Sidebar />
