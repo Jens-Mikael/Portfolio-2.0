@@ -59,7 +59,7 @@ const ProjectPage = () => {
                   {" </>"}
                 </TextGradient>
               </div>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex flex-wrap gap-2">
                 {projectsData[project].tools.map((tool) => (
                   <div
                     key={tool}
@@ -73,7 +73,7 @@ const ProjectPage = () => {
           </div>
           <div className="flex flex-col gap-3 self-end">
             <Link
-              href={``}
+              href={projectsData[project].github}
               className="group flex w-fit cursor-pointer items-center gap-1 self-end text-xs"
             >
               Source Code{" "}
