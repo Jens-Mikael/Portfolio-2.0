@@ -16,7 +16,7 @@ const Carousel = () => {
   const direction = count > previous! ? 1 : -1;
 
   return (
-    <div className="flex flex-1 flex-col justify-between">
+    <div className="flex flex-1 flex-col justify-between gap-5">
       {/* PROJECT PRESENTATION */}
       <div
         ref={ref}
@@ -30,7 +30,7 @@ const Carousel = () => {
             animate="center"
             exit="exit"
             custom={{ direction, width }}
-            className="flex w-full flex-col items-center justify-center gap-6 px-10 md:flex-row md:items-start md:gap-2"
+            className="flex w-full flex-col items-center justify-center gap-6 px-10 lg:flex-row lg:items-start md:gap-2"
           >
             <div className="xs:hidden block">
               <Laptop src={projectsData[count % 4].img} width={300} />

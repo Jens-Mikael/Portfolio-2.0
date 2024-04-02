@@ -79,21 +79,22 @@ const Home = () => (
                 height={20}
                 width={20}
                 src={`/skills/${skill.src}`}
-                className=""
               />
             </div>
           ))}
         </div>
-        <MobileTap className="group flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
-          Get in Touch{" "}
-          <Image
-            src="/svg/arrow.svg"
-            alt="ar"
-            height={20}
-            width={20}
-            className="transition-transform group-hover:translate-x-2"
-          />
-        </MobileTap>
+        <Link href="#contact">
+          <MobileTap className="group flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
+            Get in Touch{" "}
+            <Image
+              src="/svg/arrow.svg"
+              alt="ar"
+              height={20}
+              width={20}
+              className="transition-transform group-hover:translate-x-2"
+            />
+          </MobileTap>
+        </Link>
       </div>
       {/* BOTTOM NAV */}
       <div className="absolute bottom-3 flex flex-col items-center text-xs font-light text-indigo-500">
@@ -107,10 +108,7 @@ const Home = () => (
     </div>
 
     {/* PORTFOLIO PAGE */}
-    <div
-      id="portfolio"
-      className="flex h-full min-h-screen flex-col bg-[#1C1F23]"
-    >
+    <div id="portfolio" className="flex h-full flex-col gap-10 bg-[#1C1F23]">
       <div className="flex flex-col gap-3 p-10 md:p-20">
         <div className="text-xs">Checkout My Portfolio</div>
         <div className="text-3xl font-bold">
@@ -137,8 +135,8 @@ const Home = () => (
     {/* ___________ */}
     <div id="about" className="flex min-h-screen flex-col bg-[#16151D]">
       <div className="flex flex-col items-center gap-20 p-10 md:p-20">
-        <div className="flex flex-col gap-10 md:flex-row">
-          <div className="hidden h-[300px] w-[300px] md:block">
+        <div className="flex flex-col gap-10 lg:flex-row">
+          <div className="hidden h-[300px] w-[300px] self-center lg:block">
             <Image
               alt="gtr"
               src="/images/guitar.png"
@@ -218,7 +216,7 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <MobileTap className="group flex w-fit items-center gap-2 self-end rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
+        {/* <MobileTap className="group flex w-fit items-center gap-2 self-end rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
           PDF{" "}
           <Image
             src="/svg/arrow.svg"
@@ -227,7 +225,7 @@ const Home = () => (
             width={20}
             className="rotate-90 transition-transform group-hover:translate-y-1"
           />
-        </MobileTap>
+        </MobileTap> */}
       </div>
       <div className="mt-10 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
         My Services
@@ -241,7 +239,7 @@ const Home = () => (
     {/* ___________ */}
     {/* SERVICES */}
     {/* ___________ */}
-    <div id="services" className="flex min-h-screen flex-col bg-[#1C1F23]">
+    <div id="services" className="flex flex-col bg-[#1C1F23]">
       <div className="flex flex-1 flex-col gap-10 p-10 md:p-20 lg:gap-20">
         <div className="flex flex-col gap-3">
           <div className="text-xs">Services I Offer to my Clients</div>
@@ -278,10 +276,7 @@ const Home = () => (
     {/* ___________ */}
     {/* CONTACT */}
     {/* ___________ */}
-    <div
-      id="contact"
-      className="flex min-h-screen flex-col gap-16 bg-[#16151D]"
-    >
+    <div id="contact" className="flex flex-col gap-16 bg-[#16151D]">
       <div className="flex flex-1 flex-col gap-16 p-10 md:p-20 lg:flex-row">
         <div className="flex flex-1 flex-col gap-10">
           <div className="flex flex-col gap-3">
@@ -313,17 +308,19 @@ const Home = () => (
           </div>
         </div>
         <div className="flex flex-1 items-center lg:justify-center">
-          <div className="flex flex-col gap-5 text-2xl font-bold">
+          <div className="flex w-full flex-col gap-5 text-2xl font-bold sm:w-auto">
             <Link
               href="mailto:jensmikael.stjernberg@gmail.com"
-              className="flex w-fit cursor-pointer items-center gap-2 transition-all hover:scale-105 hover:underline"
+              className="flex cursor-pointer items-center gap-2 break-words transition-all hover:scale-105 hover:underline "
             >
               <SVG
                 className="h-10 w-10 fill-indigo-500"
                 src="/svg/mail.svg"
                 loader={<div className="h-10 w-10" />}
               />
-              jensmikael.stjernberg@gmail.com
+              <div className="w-full break-words">
+                jensmikael.stjernberg@gmail.com
+              </div>
             </Link>
             <Link
               href="tel:+358407676993"
@@ -345,7 +342,7 @@ const Home = () => (
     </div>
   </div>
 );
-
+//flex cursor-pointer items-center gap-1 break-words hover:underline
 const CVBlock = ({
   desc,
   title,
@@ -359,10 +356,8 @@ const CVBlock = ({
 }) => (
   <div className="flex gap-5">
     <div>
-      <div>
-        <div className="w-[130px] whitespace-nowrap rounded-lg bg-indigo-500 px-6 py-3 text-center text-sm">
-          {date}
-        </div>
+      <div className="w-[130px] whitespace-nowrap rounded-lg bg-indigo-500 sm:px-6 py-3 text-center text-sm">
+        {date}
       </div>
     </div>
     <div className="flex flex-col items-center">

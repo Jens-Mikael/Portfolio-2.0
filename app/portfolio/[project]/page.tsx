@@ -12,7 +12,7 @@ const ProjectPage = () => {
   const project = Number(params.project);
   return (
     <>
-      <div className="flex min-h-screen flex-col gap-10 px-10 py-20 md:flex-row dark:bg-[#16151D]">
+      <div className="flex min-h-screen flex-col gap-10 px-10 py-20 lg:flex-row dark:bg-[#16151D]">
         <div className="flex flex-col gap-10">
           <div className="text-3xl font-bold">
             My{" "}
@@ -20,15 +20,15 @@ const ProjectPage = () => {
               Portfolio
             </TextGradient>
           </div>
-          <div className="flex ">
-            <div className="xs:hidden block">
+          <div className="flex flex-1 items-center justify-center">
+            <div className="block xs:hidden">
               <Laptop src={projectsData[project].img} width={300} />
             </div>
-            <div className="xs:block hidden sm:hidden">
+            <div className="hidden xs:block sm:hidden">
               <Laptop src={projectsData[project].img} width={400} />
             </div>
             <div className="hidden sm:block lg:hidden">
-              <Laptop src={projectsData[project].img} width={500} />
+              <Laptop src={projectsData[project].img} width={600} />
             </div>
             <div className="hidden lg:block xl:hidden">
               <Laptop src={projectsData[project].img} width={600} />
@@ -41,32 +41,34 @@ const ProjectPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 flex-col gap-10">
-          <div className="text-2xl font-bold">
-            {projectsData[project].title}
-          </div>
-          <div className="flex flex-1 flex-col gap-6">
-            <div className="font-extralight">
-              <TextGradient color="from-indigo-500 to-purple-500">
-                {"<> "}
-              </TextGradient>
-              {projectsData[project].shortDesc}
-              <br />
-              <br />
-              {projectsData[project].longDesc}
-              <TextGradient color="from-indigo-500 to-purple-500">
-                {" </>"}
-              </TextGradient>
+        <div className="flex flex-1 flex-col items-center justify-center gap-3">
+          <div className="flex flex-col gap-10">
+            <div className="text-2xl font-bold">
+              {projectsData[project].title}
             </div>
-            <div className="flex gap-2">
-              {projectsData[project].tools.map((tool) => (
-                <div
-                  key={tool}
-                  className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm text-indigo-500"
-                >
-                  {tool}
-                </div>
-              ))}
+            <div className="flex flex-1 flex-col gap-6">
+              <div className="font-extralight">
+                <TextGradient color="from-indigo-500 to-purple-500">
+                  {"<> "}
+                </TextGradient>
+                {projectsData[project].shortDesc}
+                <br />
+                <br />
+                {projectsData[project].longDesc}
+                <TextGradient color="from-indigo-500 to-purple-500">
+                  {" </>"}
+                </TextGradient>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {projectsData[project].tools.map((tool) => (
+                  <div
+                    key={tool}
+                    className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm text-indigo-500"
+                  >
+                    {tool}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-3 self-end">
@@ -94,11 +96,6 @@ const ProjectPage = () => {
                 />
               </Link>
             )}
-          </div>
-          <div className="p-10 text-5xl font-bold">J
-            <TextGradient color="from-indigo-500 to-purple-500 ">
-              S
-            </TextGradient>
           </div>
         </div>
       </div>
