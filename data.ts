@@ -48,6 +48,62 @@ export const projectsData = [
   },
 ];
 
+export const projectsData_2 = [
+  {
+    title: "Portfolio",
+    description: "A personal portfolio I built to showcase my work. Here I include all of my best projects together with the techstack I used.",
+    github: "https://github.com/Jens-Mikael/Portfolio-2.0",
+    link: "",
+    src: "/projects-2.0/portfolio.png",
+    tools: ["Nextjs", "Tailwind"],
+  },
+  {
+    title: "Workout Tracker",
+    description:
+      "A website workout tracking website that enables users to plan their workouts, track them, view statistics and progress and view on calender previous workouts.",
+    github: "https://github.com/Jens-Mikael/Workout-Tracker",
+    link: "",
+    src: "/projects-2.0/workout.png",
+    tools: ["Nextjs", "Tailwind", "NextAuth", "PostgreSQL", "Drizzle ORM"],
+  },
+  {
+    title: "Language Master",
+    description:
+      "A fullstack app built mainly with Nextjs and Firebase to create, edit, delete and read (CRUD) flashcards for practising languages.",
+    github: "https://github.com/Jens-Mikael/language-master",
+    link: "https://language-master.vercel.app/",
+    src: "/projects-2.0/language.png",
+    tools: ["Nextjs", "Tailwind", "Firebase", "Vercel", "MiniSearch"],
+  },
+  {
+    title: "Youtube Clone",
+    description:
+      "A clone of Youtube's frontpage uisng Nextjs and Tailwind CSS to showcase my skills in building pixelperfect replications from designs",
+    github: "https://github.com/Jens-Mikael/youtube-clone",
+    link: "",
+    src: "/projects-2.0/youtube.png",
+    tools: ["Nextjs", "Tailwind"],
+  },
+  {
+    title: "Realtime Chat App",
+    description:
+      "A realtime chat app built with Nextjs and Firebase to showcase my skills in authentication and database management in the backend.",
+    github: "https://github.com/Jens-Mikael/realtime-chat-app",
+    link: "",
+    src: "/projects-2.0/realtime.png",
+    tools: ["Nextjs", "Tailwind", "Firebase"],
+  },
+  {
+    title: "Tesla Clone",
+    description:
+      "Clone of teslas frontpage to showcase my skills in pixelperfect replications from designs usil Tailwind CSS and Nextjs",
+    github: "https://github.com/Jens-Mikael/tesla-clone",
+    link: "",
+    src: "/projects-2.0/tesla.png",
+    tools: ["Nextjs", "Tailwind"],
+  },
+];
+
 export const skillsData = [
   { src: "reactjs-icon.svg" },
   { src: "next-js.svg" },
@@ -112,3 +168,94 @@ export const CVData = {
     },
   ],
 };
+
+export const products = [
+  {
+    title: "Moonbeam",
+    link: "https://gomoonbeam.com",
+    thumbnail: "/projects-2.0/language.png",
+  },
+  {
+    title: "Cursor",
+    link: "https://cursor.so",
+    thumbnail: "/projects-2.0/language.png",
+  },
+  {
+    title: "Rogue",
+    link: "https://userogue.com",
+    thumbnail: "/projects-2.0/language.png",
+  },
+
+  {
+    title: "Editorially",
+    link: "https://editorially.org",
+    thumbnail: "/projects-2.0/language.png",
+  },
+  {
+    title: "Editrix AI",
+    link: "https://editrix.ai",
+    thumbnail: "/projects-2.0/language.png",
+  },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+  },
+
+  {
+    title: "Algochurn",
+    link: "https://algochurn.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+  },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+  },
+  {
+    title: "Tailwind Master Kit",
+    link: "https://tailwindmasterkit.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+  },
+
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+  },
+  {
+    title: "Golden Bells Academy",
+    link: "https://goldenbellsacademy.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+  },
+  {
+    title: "Invoker Labs",
+    link: "https://invoker.lol",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+  },
+  {
+    title: "E Free Invoice",
+    link: "https://efreeinvoice.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+  },
+];

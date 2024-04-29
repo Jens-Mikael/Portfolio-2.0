@@ -2,11 +2,22 @@ import Image from "next/image";
 import SVG from "react-inlinesvg";
 import MobileTap from "../components/MobileTap";
 import TextGradient from "../components/TextGradient";
-import { CVData, aboutData, servicesData, skillsData } from "@/data";
+import {
+  CVData,
+  aboutData,
+  products,
+  projectsData_2,
+  servicesData,
+  skillsData,
+} from "@/data";
 import Carousel from "@/components/Carousel";
 import ServiceBlock from "@/components/ServiceBlock";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import ProjectCard from "@/components/ProjectCard";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import GradientButton from "@/components/GradientButton";
+
 const Home = () => (
   <div className="min-h-screen">
     {/* INTRO PAGE */}
@@ -71,29 +82,21 @@ const Home = () => (
             {" </>"}
           </TextGradient>
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           {skillsData.map((skill) => (
-            <div className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl">
+            <div className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl ">
               <Image
                 alt="sk"
                 height={20}
                 width={20}
+                className="min-h-5 min-w-5"
                 src={`/skills/${skill.src}`}
               />
             </div>
           ))}
         </div>
         <Link href="#contact">
-          <MobileTap className="group flex items-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
-            Get in Touch{" "}
-            <Image
-              src="/svg/arrow.svg"
-              alt="ar"
-              height={20}
-              width={20}
-              className="transition-transform group-hover:translate-x-2"
-            />
-          </MobileTap>
+          <GradientButton>Get In Touch</GradientButton>
         </Link>
       </div>
       {/* BOTTOM NAV */}
@@ -118,7 +121,19 @@ const Home = () => (
           </TextGradient>
         </div>
       </div>
-      <Carousel />
+      <div className="grid w-fit gap-14 self-center px-5 lg:grid-cols-2">
+        {projectsData_2.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            src={project.src}
+            github={project.github}
+            link={project.link}
+            tools={project.tools}
+          />
+        ))}
+      </div>
+      {/* <Carousel /> */}
 
       <div className="mt-5 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
         About Me
@@ -355,11 +370,7 @@ const CVBlock = ({
   isLast?: boolean;
 }) => (
   <div className="flex gap-5">
-    <div>
-      <div className="w-[130px] whitespace-nowrap rounded-lg bg-indigo-500 sm:px-6 py-3 text-center text-sm">
-        {date}
-      </div>
-    </div>
+    <div className="font-bold text-nowrap text-end w-36 text-white/80 pt-2.5 hidden sm:block"> {date}</div>
     <div className="flex flex-col items-center">
       <div className="h-5 border-l-[1.5px] border-white/40" />
       <div className="min-h-3 min-w-3 rounded-full bg-indigo-500" />
@@ -369,6 +380,7 @@ const CVBlock = ({
       <div className="flex flex-col gap-3 rounded-xl border border-white/20 bg-white/5 p-5">
         <div className="text-lg font-medium">{title}</div>
         <div className="text-sm font-light">{desc}</div>
+        <div className="font-bold text-white/80">{date}</div>
       </div>
     </div>
   </div>
