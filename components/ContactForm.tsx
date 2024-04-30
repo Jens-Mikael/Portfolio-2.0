@@ -20,15 +20,25 @@ import { ImSpinner8 } from "react-icons/im";
 export default function ContactForm() {
   const form = useForm<FormValues>({
     resolver: zodResolver(FormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      text: "",
+    },
   });
   async function onSubmit(data: FormValues) {
     const res = await sendEmailAction(data);
-    if (res.data)
+    if (res.data) {
       toast({
         title: "Message sent!",
         description: "I will get to you as soon as possible :)",
       });
-    else if (res.error)
+      form.reset({
+        name: "",
+        email: "",
+        text: "",
+      });
+    } else if (res.error)
       toast({
         title: "Something went wrong!",
         description: `Error: ${res.error.name}`,
