@@ -17,6 +17,8 @@ import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import GradientButton from "@/components/GradientButton";
+import Starfield from "@/components/StarBg";
+import ContactForm from "@/components/ContactForm";
 
 const Home = () => (
   <div className="min-h-screen">
@@ -254,7 +256,7 @@ const Home = () => (
     {/* ___________ */}
     {/* SERVICES */}
     {/* ___________ */}
-    <div id="services" className="flex flex-col bg-[#1C1F23]">
+    <div id="services" className="flex flex-col bg-[#050816]">
       <div className="flex flex-1 flex-col gap-10 p-10 md:p-20 lg:gap-20">
         <div className="flex flex-col gap-3">
           <div className="text-xs">Services I Offer to my Clients</div>
@@ -291,7 +293,8 @@ const Home = () => (
     {/* ___________ */}
     {/* CONTACT */}
     {/* ___________ */}
-    <div id="contact" className="flex flex-col gap-16 bg-[#16151D]">
+    <div id="contact" className="flex min-h-screen flex-col gap-16">
+      <Starfield />
       <div className="flex flex-1 flex-col gap-16 p-10 md:p-20 lg:flex-row">
         <div className="flex flex-1 flex-col gap-10">
           <div className="flex flex-col gap-3">
@@ -322,7 +325,13 @@ const Home = () => (
             </div>
           </div>
         </div>
+
         <div className="flex flex-1 items-center lg:justify-center">
+          <div className="w-full max-w-2xl bg-[#100d25] rounded-xl p-10">
+            <ContactForm />
+          </div>
+        </div>
+        {/* <div className="flex flex-1 items-center lg:justify-center">
           <div className="flex w-full flex-col gap-5 text-2xl font-bold sm:w-auto">
             <Link
               href="mailto:jensmikael.stjernberg@gmail.com"
@@ -349,12 +358,11 @@ const Home = () => (
               +358 40 7676 993
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
-
-      {/* FOOTER */}
-      <Footer />
     </div>
+    {/* FOOTER */}
+    <Footer />
   </div>
 );
 //flex cursor-pointer items-center gap-1 break-words hover:underline
@@ -370,7 +378,10 @@ const CVBlock = ({
   isLast?: boolean;
 }) => (
   <div className="flex gap-5">
-    <div className="font-bold text-nowrap text-end w-36 text-white/80 pt-2.5 hidden sm:block"> {date}</div>
+    <div className="hidden w-36 text-nowrap pt-2.5 text-end font-bold text-white/80 sm:block">
+      {" "}
+      {date}
+    </div>
     <div className="flex flex-col items-center">
       <div className="h-5 border-l-[1.5px] border-white/40" />
       <div className="min-h-3 min-w-3 rounded-full bg-indigo-500" />
@@ -380,7 +391,7 @@ const CVBlock = ({
       <div className="flex flex-col gap-3 rounded-xl border border-white/20 bg-white/5 p-5">
         <div className="text-lg font-medium">{title}</div>
         <div className="text-sm font-light">{desc}</div>
-        <div className="font-bold text-white/80">{date}</div>
+        <div className="block font-bold text-white/80 sm:hidden">{date}</div>
       </div>
     </div>
   </div>
