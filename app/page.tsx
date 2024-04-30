@@ -327,38 +327,11 @@ const Home = () => (
         </div>
 
         <div className="flex flex-1 items-center lg:justify-center">
-          <div className="w-full max-w-2xl bg-[#100d25] rounded-xl p-10">
+          <div className="w-full max-w-2xl bg-[#100d25] rounded-xl p-5 sm:p-10">
             <ContactForm />
           </div>
         </div>
-        {/* <div className="flex flex-1 items-center lg:justify-center">
-          <div className="flex w-full flex-col gap-5 text-2xl font-bold sm:w-auto">
-            <Link
-              href="mailto:jensmikael.stjernberg@gmail.com"
-              className="flex cursor-pointer items-center gap-2 break-words transition-all hover:scale-105 hover:underline "
-            >
-              <SVG
-                className="h-10 w-10 fill-indigo-500"
-                src="/svg/mail.svg"
-                loader={<div className="h-10 w-10" />}
-              />
-              <div className="w-full break-words">
-                jensmikael.stjernberg@gmail.com
-              </div>
-            </Link>
-            <Link
-              href="tel:+358407676993"
-              className="flex w-fit cursor-pointer items-center gap-2 transition-all hover:scale-105 hover:underline"
-            >
-              <SVG
-                className="h-10 w-10 fill-indigo-500"
-                src="/svg/phone.svg"
-                loader={<div className="h-10 w-10" />}
-              />
-              +358 40 7676 993
-            </Link>
-          </div>
-        </div> */}
+        
       </div>
     </div>
     {/* FOOTER */}
