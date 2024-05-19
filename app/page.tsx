@@ -152,11 +152,11 @@ const Home = () => (
     {/* ___________ */}
     <div id="about" className="flex min-h-screen flex-col bg-[#16151D]">
       <div className="flex flex-col items-center gap-20 p-10 md:p-20">
-        <div className="flex flex-col gap-10 lg:flex-row">
-          <div className="hidden h-[300px] w-[300px] self-center lg:block">
+        <div className="flex flex-col-reverse gap-10 lg:flex-row">
+          <div className=" h-[300px] w-[300px] self-center block">
             <Image
               alt="gtr"
-              src="/images/guitar.png"
+              src="/images/guitar.jpg"
               width={0}
               height={0}
               sizes="100vh"
