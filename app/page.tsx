@@ -153,7 +153,7 @@ const Home = () => (
     <div id="about" className="flex min-h-screen flex-col bg-[#16151D]">
       <div className="flex flex-col items-center gap-20 p-10 md:p-20">
         <div className="flex flex-col-reverse gap-10 lg:flex-row">
-          <div className=" h-[300px] w-[300px] self-center block">
+          <div className=" block h-[300px] w-[300px] self-center">
             <Image
               alt="gtr"
               src="/images/guitar.jpg"
@@ -327,11 +327,10 @@ const Home = () => (
         </div>
 
         <div className="flex flex-1 items-center lg:justify-center">
-          <div className="w-full max-w-2xl bg-[#100d25] rounded-xl p-5 sm:p-10">
+          <div className="w-full max-w-2xl rounded-xl bg-[#100d25] p-5 sm:p-10">
             <ContactForm />
           </div>
         </div>
-        
       </div>
     </div>
     {/* FOOTER */}

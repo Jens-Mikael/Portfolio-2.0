@@ -51,11 +51,29 @@ export const projectsData = [
 export const projectsData_2 = [
   {
     title: "Portfolio",
-    description: "A personal portfolio I built to showcase my work. Here I include all of my best projects together with the techstack I used.",
+    description:
+      "A personal portfolio I built to showcase my work. Here I include all of my best projects together with the techstack I used.",
     github: "https://github.com/Jens-Mikael/Portfolio-2.0",
     link: "",
     src: "/projects-2.0/portfolio.png",
     tools: ["Nextjs", "Tailwind"],
+  },
+  {
+    title: "Roof History",
+    description:
+      "A production level website for roof assessments where I was responsible for creating all of the backend functionality e.g. auth and numerous CRUD features",
+    github: "",
+    link: "",
+    src: "/projects-2.0/roof.png",
+    tools: [
+      "Nextjs",
+      "Tailwind",
+      "NextAuth",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Resend",
+      "Edgestore",
+    ],
   },
   {
     title: "Workout Tracker",

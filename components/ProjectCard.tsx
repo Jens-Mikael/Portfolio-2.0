@@ -16,7 +16,7 @@ export default function ProjectCard({
 }: {
   title: string;
   description: string;
-  github: string;
+  github?: string;
   link?: string;
   src: string;
   tools: string[];
@@ -59,16 +59,18 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="mt-5 flex items-center justify-between">
-          <CardItem
-            translateZ={50}
-            as={Link}
-            href={github || ""}
-            target="__blank"
-            className="flex items-center gap-1 px-4 py-2 text-xs font-normal dark:text-white"
-          >
-            Source Code{" "}
-            <IoIosArrowRoundForward className="h-6 w-6 fill-indigo-500" />
-          </CardItem>
+          {github && (
+            <CardItem
+              translateZ={50}
+              as={Link}
+              href={github || ""}
+              target="__blank"
+              className="flex items-center gap-1 px-4 py-2 text-xs font-normal dark:text-white"
+            >
+              Source Code{" "}
+              <IoIosArrowRoundForward className="h-6 w-6 fill-indigo-500" />
+            </CardItem>
+          )}
           {link && (
             <CardItem
               translateZ={40}
