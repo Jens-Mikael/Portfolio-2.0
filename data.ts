@@ -61,7 +61,7 @@ export const projectsData_2 = [
   {
     title: "Roof History",
     description:
-      "A production level website for roof assessments where I was responsible for creating all of the backend functionality e.g. auth and numerous CRUD features",
+      "A production level website for a roof assessment start-up where I was responsible for creating the backend functionality e.g. auth and numerous CRUD features",
     github: "",
     link: "",
     src: "/projects-2.0/roof.png",
@@ -78,7 +78,7 @@ export const projectsData_2 = [
   {
     title: "Workout Tracker",
     description:
-      "A website workout tracking website that enables users to plan their workouts, track them, view statistics and progress and view on calender previous workouts.",
+      "A workout tracking website that enables users to plan their workouts, track them, view their statistics and progress and browse on a calender previous workouts.",
     github: "https://github.com/Jens-Mikael/Workout-Tracker",
     link: "",
     src: "/projects-2.0/workout.png",
@@ -87,7 +87,7 @@ export const projectsData_2 = [
   {
     title: "Language Master",
     description:
-      "A fullstack app built mainly with Nextjs and Firebase to create, edit, delete and read (CRUD) flashcards for practising languages.",
+      "A fullstack app built to create, update, delete, read and search for flashcards that you or someone else has made to practise languages .",
     github: "https://github.com/Jens-Mikael/language-master",
     link: "https://language-master.vercel.app/",
     src: "/projects-2.0/language.png",
@@ -96,7 +96,7 @@ export const projectsData_2 = [
   {
     title: "Youtube Clone",
     description:
-      "A clone of Youtube's frontpage uisng Nextjs and Tailwind CSS to showcase my skills in building pixelperfect replications from designs",
+      "A clone of Youtube's frontpage built to showcase my skills in building pixelperfect replications from designs or existing websites.",
     github: "https://github.com/Jens-Mikael/youtube-clone",
     link: "",
     src: "/projects-2.0/youtube.png",
@@ -105,7 +105,7 @@ export const projectsData_2 = [
   {
     title: "Realtime Chat App",
     description:
-      "A realtime chat app built with Nextjs and Firebase to showcase my skills in authentication and database management in the backend.",
+      "A realtime chat app built to showcase my skills in authentication and database management on the backend in realtime.",
     github: "https://github.com/Jens-Mikael/realtime-chat-app",
     link: "",
     src: "/projects-2.0/realtime.png",
@@ -114,7 +114,7 @@ export const projectsData_2 = [
   {
     title: "Tesla Clone",
     description:
-      "Clone of teslas frontpage to showcase my skills in pixelperfect replications from designs usil Tailwind CSS and Nextjs",
+      "A simple one day project of Tesla's frontpage to showcase my skills in pixelperfect replications from designs.",
     github: "https://github.com/Jens-Mikael/tesla-clone",
     link: "",
     src: "/projects-2.0/tesla.png",
@@ -137,27 +137,27 @@ export const servicesData = [
   {
     category: "Web Development",
     title: "Frontend Development",
-    desc: "I can provide the frontend to your application, whatever the prerequisites are. I have a couple of years of experience in the field and can provide you with clean and high performance code provided you have already a some sort of design or sketch I could develop and customize. Either way my, main purpose on the client side is to provide an unique UI and UX to your application and customers.",
+    desc: "I can provide the frontend to your application, whatever the prerequisites are. I have a couple of years of experience in the field and can provide you with clean and high performance code provided you have already a some sort of design or sketch I could develop and customize. Either way, my main purpose on the client side is to provide an unique UI and UX to your application and customers.",
   },
   {
     category: "Web Development",
     title: "Backend Development",
-    desc: "I'm fluent in creating and developing the backend and functionality of a web application using Firebase and DrizzleORM. With these tools, I can provide you with a database and authentication with OAuth providers such as Google and Facebook or the usual email and password. ",
+    desc: "I'm fluent in creating and developing the backend and functionality of a web application using Firebase and DrizzleORM in Nextjs' environment. With these tools, I can provide you with a database and authentication with OAuth providers such as Google and Facebook or the usual email and password. ",
   },
   {
     category: "Web Development",
     title: "Design Replication",
-    desc: "Thanks to my experience of website cloning, I'm fluent in creating and developing a web application from any sort of design or source. I'm not myself very much of a website designer, but with a little bit of an idea or explanation with a sketch or design I can make anything possible on the client.",
+    desc: "Thanks to my experience of website cloning, I'm fluent in creating and developing a web application from any sort of design or source. I'm not myself very much of a website designer, but with a little bit of an idea or explanation with a sketch or design I can make anything possible for your business' website.",
   },
 ];
 
 export const aboutData = {
   shortDesc:
-    "I'm a software developer who specializes in building the web. I'm lookin forward to develop my skills in the field and contributing to meaningful projects. ",
+    "I'm a software developer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
   longDesc1:
-    "I'm 17 years old and speak fluently English, Swedish, Finnish and Norwegian and also a bit of German. I have been programming for a couple of years now. I first started with game development with the Pygame python library but after that I graviated more into web development and have been passionated ever since about building beautiful web applications with Typescipt and Tailwind in Nextjs. Recently, on the other hand, I have been focusing more on the architecture of web apps and have began learning about databases and authentication with Firebase and other SQL databases with DrizzleORM and OAuth services. ",
+    "I'm 17 years old and speak fluently English, Swedish, Finnish and Norwegian and also a bit of German. I have been programming for around 3 years now. I initially began with game development using Pygame in Python but afterwards I graviated more into web development and have been passionated ever since about building beautiful web applications with Typescipt and Tailwind in Nextjs. Recently, on the other hand, I have been focusing more on the architecture of web apps and striving towards enhancing the perfomance between the client and backend in the most secure way. I've began learning about databases and authentication with Firebase and other SQL databases with DrizzleORM and OAuth services. ",
   longDesc2:
-    "Despite being in high school, I mostly spend my freetime programming and playing music. I also highly value health, so when I'm not in front of the computer or by my guitar I go to the gym and train untill I can't lift my arms anymore. Either way, I love learning and having fun with solving problems and hence this I belive I could be a great option for you to hire (or employ). ",
+    "Despite being in high school, I mostly spend my freetime programming and playing music. I also highly value health, so when I'm not in front of the computer or by my guitar I go to the gym and train untill I can't lift my arms anymore. Either way, I love learning and having fun with solving problems and hence this I belive I could be a great developer for your business. ",
 };
 
 export const CVData = {
@@ -165,7 +165,7 @@ export const CVData = {
     {
       title: "High School - BJSS",
       date: "2023 - Now",
-      desc: "Currently in my first year of high school in Pori's Swedish high school.",
+      desc: "Currently in my second year of Pori's Swedish high school.",
     },
     {
       title: "Primary School - BJSS",
@@ -186,94 +186,3 @@ export const CVData = {
     },
   ],
 };
-
-export const products = [
-  {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail: "/projects-2.0/language.png",
-  },
-  {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail: "/projects-2.0/language.png",
-  },
-  {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail: "/projects-2.0/language.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail: "/projects-2.0/language.png",
-  },
-  {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail: "/projects-2.0/language.png",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
-  },
-  {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-  },
-  {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
-  },
-];

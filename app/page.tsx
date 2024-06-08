@@ -5,17 +5,14 @@ import TextGradient from "../components/TextGradient";
 import {
   CVData,
   aboutData,
-  products,
   projectsData_2,
   servicesData,
   skillsData,
 } from "@/data";
-import Carousel from "@/components/Carousel";
 import ServiceBlock from "@/components/ServiceBlock";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
-import { IoIosArrowRoundForward } from "react-icons/io";
 import GradientButton from "@/components/GradientButton";
 import Starfield from "@/components/StarBg";
 import ContactForm from "@/components/ContactForm";
