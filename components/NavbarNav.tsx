@@ -3,11 +3,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const elementIds = ["home", "portfolio", "about", "services", "contact"];
+const elementIds = [
+  "home",
+  "portfolio",
+  "testimonials",
+  "about",
+  "services",
+  "contact",
+];
 
-const NavbarNav = () => {
-  const pathname = usePathname();
-  console.log()
+const NavbarNav = ({
+  setIsSidebarOpen,
+}: {
+  setIsSidebarOpen?: (value: boolean) => void;
+}) => {
   const [elementInView, setElementInView] = useState("");
   useEffect(() => {
     document.addEventListener("scroll", () => {
@@ -18,32 +27,56 @@ const NavbarNav = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-3 md:flex-row md:gap-10 font-light">
+    <div className="flex flex-col gap-3 font-light md:flex-row md:gap-10">
       <Link
+        onClick={() => {
+          if (setIsSidebarOpen) setIsSidebarOpen(false);
+        }}
         href="/#home"
         className={`${elementInView !== "home" && "opacity-60"} transition-opacity `}
       >
         Home
       </Link>
       <Link
+        onClick={() => {
+          if (setIsSidebarOpen) setIsSidebarOpen(false);
+        }}
         href="/#portfolio"
-        className={`${!pathname.includes("portfolio") && elementInView !== "portfolio" && "opacity-60"} transition-opacity`}
+        className={`${elementInView !== "portfolio" && "opacity-60"} transition-opacity`}
       >
         Portfolio
       </Link>
       <Link
+        onClick={() => {
+          if (setIsSidebarOpen) setIsSidebarOpen(false);
+        }}
+        href="/#testimonials"
+        className={`${elementInView !== "testimonials" && "opacity-60"} transition-opacity`}
+      >
+        Testimonials
+      </Link>
+      <Link
+        onClick={() => {
+          if (setIsSidebarOpen) setIsSidebarOpen(false);
+        }}
         href="/#about"
-        className={`${pathname !== "/about" && elementInView !== "about" && "opacity-60"} transition-opacity`}
+        className={`${elementInView !== "about" && "opacity-60"} transition-opacity`}
       >
         About
       </Link>
       <Link
+        onClick={() => {
+          if (setIsSidebarOpen) setIsSidebarOpen(false);
+        }}
         href="/#services"
         className={`${elementInView !== "services" && "opacity-60"} transition-opacity`}
       >
         Services
       </Link>
       <Link
+        onClick={() => {
+          if (setIsSidebarOpen) setIsSidebarOpen(false);
+        }}
         href="/#contact"
         className={`${elementInView !== "contact" && "opacity-60"} transition-opacity`}
       >
@@ -54,20 +87,23 @@ const NavbarNav = () => {
       <div
         className={`absolute -bottom-2 hidden h-1 rounded-full bg-indigo-600 transition-all md:block 
         ${elementInView === "home" && " w-10"} 
-        ${(pathname.includes("portfolio") || elementInView === "portfolio") && "w-14 translate-x-[79px]"} 
-        ${(pathname === "/about" || elementInView === "about") && "w-10 translate-x-[173px]"} 
-        ${elementInView === "services" && "w-[58px] translate-x-[252px]"} 
-        ${elementInView === "contact" && "w-14 translate-x-[347px]"}`}
+        ${elementInView === "portfolio" && "w-14 translate-x-[79px]"} 
+        ${elementInView === "testimonials" && "w-20 translate-x-[175px]"} 
+        ${elementInView === "about" && "w-10 translate-x-[294px]"} 
+        ${elementInView === "services" && "w-[58px] translate-x-[374px]"} 
+        ${elementInView === "contact" && "w-14 translate-x-[468px]"}`}
       />
 
       {/* SIDEBAR NAV */}
       <div
         className={`absolute left-3 w-1 rounded-full bg-indigo-600 transition-all md:hidden
         ${elementInView === "home" && " h-4 translate-y-1"} 
-        ${(pathname === "/portfolio" || elementInView === "portfolio") && "h-4 translate-y-[39px]"} 
-        ${(pathname === "/about" || elementInView === "about") && "h-4 translate-y-[76px]"} 
-        ${elementInView === "services" && "h-4 translate-y-[112px]"} 
-        ${elementInView === "contact" && "h-4 translate-y-[148px]"}`}
+        ${elementInView === "portfolio" && "h-4 translate-y-[39px]"} 
+        ${elementInView === "testimonials" && "h-4 translate-y-[75px]"} 
+
+        ${elementInView === "about" && "h-4 translate-y-[110px]"} 
+        ${elementInView === "services" && "h-4 translate-y-[148px]"} 
+        ${elementInView === "contact" && "h-4 translate-y-[183px]"}`}
       ></div>
     </div>
   );

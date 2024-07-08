@@ -14,21 +14,28 @@ const Sidebar = () => {
     <>
       {/* HAM BUTTON */}
       <MobileTap onClick={() => setSidebarOpen(true)} className="md:hidden">
-        <SVG src="/svg/menu.svg" className="h-6 w-6 fill-white" loader={<div className="h-6 w-6" />} />
+        <SVG
+          src="/svg/menu.svg"
+          className="h-6 w-6 fill-white"
+          loader={<div className="h-6 w-6" />}
+        />
       </MobileTap>
 
       {/* SIDEBAR */}
       <div
-        className={` fixed inset-0 right-0 z-20 flex transition duration-500 lg:hidden ${
+        className={` fixed inset-y-0 right-0 z-30 flex transition duration-500 md:hidden ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div onClick={() => setSidebarOpen(false)} className="flex-1" />
         {/* content */}
-        <div className="flex h-full w-[110px] flex-col gap-5 overflow-y-scroll border-l border-white/20 bg-[#16151D] shadow-xl p-6 relative">
-          <NavbarNav />
+        <div className="relative flex h-full w-[150px] flex-col gap-5 overflow-y-scroll border-l border-white/20 bg-[#020817] p-6 shadow-xl">
+          <NavbarNav setIsSidebarOpen={setSidebarOpen} />
         </div>
       </div>
+      <div
+        onClick={() => setSidebarOpen(false)}
+        className={`fixed inset-0 left-0 top-0 transition-all md:hidden ${sidebarOpen ? "z-20 backdrop-blur-md lg:-z-20" : "-z-20 backdrop-blur-none"}`}
+      />
     </>
   );
 };
