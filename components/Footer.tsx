@@ -1,6 +1,7 @@
 import { aboutData } from "@/data";
 import Link from "next/link";
 import SVG from "react-inlinesvg";
+import { BiBriefcase } from "react-icons/bi";
 
 const Footer = () => (
   <div className="xs:p-10 xs:pb-7 xs:gap-7 flex flex-col items-center justify-center gap-5 border-t border-white/50 bg-gradient-to-r from-violet-600 via-indigo-500 to-indigo-600 p-5">
@@ -75,12 +76,20 @@ const Footer = () => (
             />
             +358 40 7676 993
           </Link>
+          <Link
+            href="https://www.finder.fi/"
+            className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
+          >
+            <BiBriefcase />
+            Stjernberg Web and IT-services
+          </Link>
         </div>
       </div>
     </div>
     <div className="w-full border-t border-white/50" />
-    <div className="text-xs font-medium text-white/70 text-center">
-      Built with Passion & Commitment in Next.js © Copyright 2024. All Rights Reserved{" "}
+    <div className="text-center text-xs font-medium text-white/70">
+      Built with Passion & Commitment in Next.js © Copyright 2024. All Rights
+      Reserved{" "}
     </div>
   </div>
 );

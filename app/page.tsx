@@ -8,6 +8,7 @@ import {
   projectsData_2,
   servicesData,
   skillsData,
+  testimonialsData,
 } from "@/data";
 import ServiceBlock from "@/components/ServiceBlock";
 import Link from "next/link";
@@ -16,6 +17,7 @@ import ProjectCard from "@/components/ProjectCard";
 import GradientButton from "@/components/GradientButton";
 import Starfield from "@/components/StarBg";
 import ContactForm from "@/components/ContactForm";
+import TestimonialBlock from "@/components/TestimonialBlock";
 
 const Home = () => (
   <div className="min-h-screen">
@@ -67,7 +69,7 @@ const Home = () => (
           />
         </div>
         <div className="text-3xl font-bold">
-          Hi, I'm
+          Hi, I&apos;m
           <TextGradient color="from-indigo-500 to-purple-500">
             {" <Jens-Mikael Stjernberg />"}
           </TextGradient>
@@ -82,8 +84,8 @@ const Home = () => (
           </TextGradient>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2">
-          {skillsData.map((skill) => (
-            <div className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl ">
+          {skillsData.map((skill, i) => (
+            <div key={i} className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl ">
               <Image
                 alt="sk"
                 height={20}
@@ -121,8 +123,9 @@ const Home = () => (
         </div>
       </div>
       <div className="grid w-fit gap-14 self-center px-5 lg:grid-cols-2">
-        {projectsData_2.map((project) => (
+        {projectsData_2.map((project, i) => (
           <ProjectCard
+          key={i}
             title={project.title}
             description={project.description}
             src={project.src}
@@ -132,10 +135,41 @@ const Home = () => (
           />
         ))}
       </div>
-      {/* <Carousel /> */}
+      <div className="mt-5 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
+        Testimonials
+        <SVG
+          src="/svg/arrow.svg"
+          className="h-5 w-5 rotate-90 fill-indigo-500"
+          loader={<div className="h-5 w-5" />}
+        />
+      </div>
+    </div>
+
+    {/* TESTIMONIALS */}
+    <div
+      id="testimonials"
+      className="flex h-full flex-col gap-10  bg-[#020817]"
+    >
+      <div className="flex flex-col gap-10 p-10 lg:p-20">
+        <div className="flex flex-col gap-3">
+          <div className="text-xs">What Others Say</div>
+          <div className="text-3xl font-bold">
+            <TextGradient color="from-indigo-500 to-purple-500">
+              Testimonials
+            </TextGradient>
+          </div>
+        </div>
+
+        <div className="relative grid w-full gap-10  overflow-hidden rounded-2xl bg-[#100d25] p-5 md:grid-cols-2 md:p-10 xl:grid-cols-3">
+          {testimonialsData.map((obj, i) => (
+            <TestimonialBlock key={i} testimonial={obj} />
+          ))}
+          <div className="absolute left-0 top-0 z-0 h-[250px] w-full rounded-b-[30px] bg-[#151030]" />
+        </div>
+      </div>
 
       <div className="mt-5 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
-        About Me
+        Who am I
         <SVG
           src="/svg/arrow.svg"
           className="h-5 w-5 rotate-90 fill-indigo-500"
@@ -147,7 +181,7 @@ const Home = () => (
     {/* ___________ */}
     {/* ABOUT */}
     {/* ___________ */}
-    <div id="about" className="flex min-h-screen flex-col bg-[#16151D]">
+    <div id="about" className="flex min-h-screen flex-col bg-[#110e1c]">
       <div className="flex flex-col items-center gap-20 p-10 md:p-20">
         <div className="flex flex-col-reverse gap-10 lg:flex-row">
           <div className=" block h-[300px] w-[300px] self-center">
@@ -205,7 +239,9 @@ const Home = () => (
               <div className="text-2xl font-bold">Education</div>
               <div>
                 {CVData.education.map((obj, i) => (
+                
                   <CVBlock
+                  key={i}
                     title={obj.title}
                     date={obj.date}
                     desc={obj.desc}
@@ -220,6 +256,7 @@ const Home = () => (
               <div>
                 {CVData.experience.map((obj, i) => (
                   <CVBlock
+                  key={i}
                     title={obj.title}
                     date={obj.date}
                     desc={obj.desc}
@@ -315,7 +352,7 @@ const Home = () => (
               <br />
               <br />
               Anyhow, have an exiting project you need help with? Send me an
-              email or contact me via Whatsapp! I'll be happy to hear from you!
+              email or contact me via Whatsapp! I&apos;ll be happy to hear from you!
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>

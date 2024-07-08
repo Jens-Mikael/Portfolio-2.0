@@ -1,3 +1,5 @@
+import DanSveenPfp from "./public/testimonials/dsveen.webp";
+
 export const projectsData = [
   {
     img: "/projects/language-master.png",
@@ -130,7 +132,6 @@ export const skillsData = [
   { src: "firebase-icon.svg" },
   { src: "drizzle-orm.png" },
   { src: "postgresql.svg" },
-  { src: "mongodb-icon.svg" },
 ];
 
 export const servicesData = [
@@ -186,3 +187,56 @@ export const CVData = {
     },
   ],
 };
+
+export const testimonialsData = [
+  {
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },
+  {
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },{
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },{
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },{
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },{
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },{
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },{
+    quote:
+      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },
+];
