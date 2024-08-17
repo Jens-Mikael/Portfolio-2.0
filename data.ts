@@ -1,3 +1,12 @@
+import EskimoImage from "./public/projects/eskimo.png";
+import HansatoriImage from "./public/projects/hansatori.png";
+import LanguageImage from "./public/projects/language.png";
+import PortfolioImage from "./public/projects/portfolio.png";
+import RoofImage from "./public/projects/roof.png";
+import TeslaImage from "./public/projects/tesla.png";
+import WorkoutImage from "./public/projects/workout.png";
+import YoutubeImage from "./public/projects/youtube.png";
+
 export const projectsData = [
   {
     img: "/projects/language-master.png",
@@ -50,13 +59,13 @@ export const projectsData = [
 
 export const projectsData_2 = [
   {
-    title: "Portfolio",
+    title: "Eskimo Village",
     description:
-      "A personal portfolio I built to showcase my work. Here I include all of my best projects together with the techstack I used.",
-    github: "https://github.com/Jens-Mikael/Portfolio-2.0",
+      "A self-help learning portal website with blog lessons, video lectures and a respectful, encouraging and strongly connected community.",
+    github: "",
     link: "",
-    src: "/projects-2.0/portfolio.png",
-    tools: ["Nextjs", "Tailwind"],
+    src: EskimoImage,
+    tools: ["Nextjs", "Tailwind", "Cloudflare", "Matrix"],
   },
   {
     title: "Roof History",
@@ -64,7 +73,7 @@ export const projectsData_2 = [
       "A production level website for a roof assessment start-up where I was responsible for creating the backend functionality e.g. auth and numerous CRUD features",
     github: "",
     link: "",
-    src: "/projects-2.0/roof.png",
+    src: RoofImage,
     tools: [
       "Nextjs",
       "Tailwind",
@@ -73,7 +82,34 @@ export const projectsData_2 = [
       "Drizzle ORM",
       "Resend",
       "Edgestore",
+      "Google Maps API",
     ],
+  },
+  {
+    title: "Hansatori Pharmacy",
+    description:
+      "A website for a pharmacy located in Turku, Finland, where visitors can browse current stock and information about specific products.",
+    github: "",
+    link: "",
+    src: HansatoriImage,
+    tools: [
+      "Nextjs",
+      "Tailwind",
+      "i18n",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Resend",
+      "Google Maps API",
+    ],
+  },
+  {
+    title: "Portfolio",
+    description:
+      "A personal portfolio I built to showcase my work. Here I include all of my best projects together with the techstack I used.",
+    github: "https://github.com/Jens-Mikael/Portfolio-2.0",
+    link: "",
+    src: PortfolioImage,
+    tools: ["Nextjs", "Tailwind"],
   },
   {
     title: "Workout Tracker",
@@ -81,7 +117,7 @@ export const projectsData_2 = [
       "A workout tracking website that enables users to plan their workouts, track them, view their statistics and progress and browse on a calender previous workouts.",
     github: "https://github.com/Jens-Mikael/Workout-Tracker",
     link: "",
-    src: "/projects-2.0/workout.png",
+    src: WorkoutImage,
     tools: ["Nextjs", "Tailwind", "NextAuth", "PostgreSQL", "Drizzle ORM"],
   },
   {
@@ -90,7 +126,7 @@ export const projectsData_2 = [
       "A fullstack app built to create, update, delete, read and search for flashcards that you or someone else has made to practise languages .",
     github: "https://github.com/Jens-Mikael/language-master",
     link: "https://language-master.vercel.app/",
-    src: "/projects-2.0/language.png",
+    src: LanguageImage,
     tools: ["Nextjs", "Tailwind", "Firebase", "Vercel", "MiniSearch"],
   },
   {
@@ -99,17 +135,8 @@ export const projectsData_2 = [
       "A clone of Youtube's frontpage built to showcase my skills in building pixelperfect replications from designs or existing websites.",
     github: "https://github.com/Jens-Mikael/youtube-clone",
     link: "",
-    src: "/projects-2.0/youtube.png",
+    src: YoutubeImage,
     tools: ["Nextjs", "Tailwind"],
-  },
-  {
-    title: "Realtime Chat App",
-    description:
-      "A realtime chat app built to showcase my skills in authentication and database management on the backend in realtime.",
-    github: "https://github.com/Jens-Mikael/realtime-chat-app",
-    link: "",
-    src: "/projects-2.0/realtime.png",
-    tools: ["Nextjs", "Tailwind", "Firebase"],
   },
   {
     title: "Tesla Clone",
@@ -117,7 +144,7 @@ export const projectsData_2 = [
       "A simple one day project of Tesla's frontpage to showcase my skills in pixelperfect replications from designs.",
     github: "https://github.com/Jens-Mikael/tesla-clone",
     link: "",
-    src: "/projects-2.0/tesla.png",
+    src: TeslaImage,
     tools: ["Nextjs", "Tailwind"],
   },
 ];
@@ -130,7 +157,6 @@ export const skillsData = [
   { src: "firebase-icon.svg" },
   { src: "drizzle-orm.png" },
   { src: "postgresql.svg" },
-  { src: "mongodb-icon.svg" },
 ];
 
 export const servicesData = [
