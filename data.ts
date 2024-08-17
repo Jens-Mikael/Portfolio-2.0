@@ -191,6 +191,13 @@ export const CVData = {
 export const testimonialsData = [
   {
     quote:
+      "I recently hired Jens to develop the backend for my website and couldn't be more pleased with the robust, efficient, and scalable results. Jens maintained seamless communication, provided valuable insights, and I highly recommend their high-quality backend development services.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },
+  {
+    quote:
       "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
@@ -202,37 +209,36 @@ export const testimonialsData = [
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
     pfpSrc: DanSveenPfp,
-  },{
+  },
+  {
     quote:
       "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
     pfpSrc: DanSveenPfp,
-  },{
+  },
+  {
     quote:
       "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
     pfpSrc: DanSveenPfp,
-  },{
+  },
+  {
     quote:
       "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
     pfpSrc: DanSveenPfp,
-  },{
+  },
+  {
     quote:
       "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
     pfpSrc: DanSveenPfp,
-  },{
-    quote:
-      "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
-    name: "Dan Sveen",
-    title: "CEO and Founder of Roof History",
-    pfpSrc: DanSveenPfp,
-  },{
+  },
+  {
     quote:
       "I thought it was impossible to make a website as beautiful as our product, but Jens proved me wrong.",
     name: "Dan Sveen",
