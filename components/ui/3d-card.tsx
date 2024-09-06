@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -62,6 +61,8 @@ export const CardContainer = ({
           className={cn(
             "relative flex items-center justify-center transition-all duration-200 ease-linear",
             className,
+            "relative flex items-center justify-center transition-all duration-200 ease-linear",
+            className,
           )}
           style={{
             transformStyle: "preserve-3d",
@@ -85,6 +86,7 @@ export const CardBody = ({
     <div
       className={cn(
         "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d]",
+        className,
         className,
       )}
     >

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import SVG from "react-inlinesvg";
-import MobileTap from "../components/MobileTap";
 import TextGradient from "../components/TextGradient";
 import {
   CVData,
@@ -27,7 +26,6 @@ const Home = () => (
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#16151D] px-7 text-center text-white"
     >
       {/* BG ICONS */}
-      {/* <SVG src="/svg/dotted-ball.svg" className="fill-[#00D2BA] h-1/2 w-1/2 absolute top-[-100px] right-[-250px]" /> */}
       <Image
         alt="dotted"
         src="/dotted2.png"
@@ -48,7 +46,7 @@ const Home = () => (
       <div className="absolute left-[4%] top-1/3 flex rotate-45 flex-col gap-1 sm:left-[8%]">
         <Green />
       </div>
-      <div className="absolute bottom-[15%] right-[4%] flex -rotate-45 flex-col gap-1">
+      <div className="absolute bottom-[25%] right-[4%] flex -rotate-45 flex-col gap-1">
         <Green />
       </div>
       <div className="absolute left-[15%] top-[15%] flex -rotate-12 flex-col gap-1 md:left-[25%]">
@@ -85,7 +83,10 @@ const Home = () => (
         </div>
         <div className="flex flex-wrap items-center justify-center gap-2">
           {skillsData.map((skill, i) => (
-            <div key={i} className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl ">
+            <div
+              key={i}
+              className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl "
+            >
               <Image
                 alt="sk"
                 height={20}
@@ -112,8 +113,8 @@ const Home = () => (
     </div>
 
     {/* PORTFOLIO PAGE */}
-    <div id="portfolio" className="flex h-full flex-col gap-10 bg-[#1C1F23]">
-      <div className="flex flex-col gap-3 p-10 md:p-20">
+    <div id="portfolio" className="flex h-full flex-col gap-10 bg-[#110e1c] p-10 md:p-20">
+      <div className="flex flex-col gap-3 ">
         <div className="text-xs">Checkout My Portfolio</div>
         <div className="text-3xl font-bold">
           My{" "}
@@ -122,10 +123,10 @@ const Home = () => (
           </TextGradient>
         </div>
       </div>
-      <div className="grid w-fit gap-14 self-center px-5 lg:grid-cols-2">
+      <div className="grid w-fit gap-14 lg:grid-cols-2 self-center">
         {projectsData_2.map((project, i) => (
           <ProjectCard
-          key={i}
+            key={i}
             title={project.title}
             description={project.description}
             src={project.src}
@@ -223,7 +224,7 @@ const Home = () => (
         {/* __________*/}
         {/* CV RESUME */}
         {/* _________ */}
-        <div className="flex flex-col gap-10">
+        <div className="flex w-full flex-col gap-10">
           <div className="flex flex-col gap-3 self-start">
             <div className="text-xs">My Journey</div>
             <div className="text-3xl font-bold">
@@ -239,9 +240,8 @@ const Home = () => (
               <div className="text-2xl font-bold">Education</div>
               <div>
                 {CVData.education.map((obj, i) => (
-                
                   <CVBlock
-                  key={i}
+                    key={i}
                     title={obj.title}
                     date={obj.date}
                     desc={obj.desc}
@@ -256,7 +256,7 @@ const Home = () => (
               <div>
                 {CVData.experience.map((obj, i) => (
                   <CVBlock
-                  key={i}
+                    key={i}
                     title={obj.title}
                     date={obj.date}
                     desc={obj.desc}
@@ -352,7 +352,8 @@ const Home = () => (
               <br />
               <br />
               Anyhow, have an exiting project you need help with? Send me an
-              email or contact me via Whatsapp! I&apos;ll be happy to hear from you!
+              email or contact me via Whatsapp! I&apos;ll be happy to hear from
+              you!
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
@@ -384,8 +385,7 @@ const CVBlock = ({
   isLast?: boolean;
 }) => (
   <div className="flex gap-5">
-    <div className="hidden w-36 text-nowrap pt-2.5 text-end font-bold text-white/80 sm:block">
-      {" "}
+    <div className="hidden min-w-28 text-nowrap pt-2.5 text-end font-bold text-white/80 sm:block">
       {date}
     </div>
     <div className="flex flex-col items-center">

@@ -43,7 +43,7 @@ const Footer = () => (
       </div>
       <div className="flex flex-1 flex-col gap-2">
         <div className="text-sm font-bold">CONTACT</div>
-        <div className="flex flex-col gap-1 text-xs">
+        <div className="flex flex-col gap-1.5 text-xs">
           <Link
             href="https://www.google.com/maps/place/pori"
             className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
@@ -84,7 +84,9 @@ const Footer = () => (
             className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
           >
             <BiBriefcase />
-            Stjernberg Web and IT-services
+            Stjernberg Web and IT Services <br />
+            3469579-5
+
           </Link>
         </div>
       </div>
