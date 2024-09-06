@@ -65,7 +65,7 @@ export const projectsData_2 = [
     github: "",
     link: "",
     src: EskimoImage,
-    tools: ["Nextjs", "Tailwind", "Cloudflare", "Matrix"],
+    tools: ["Nextjs", "Tailwind", "Cloudflare", "Matrix", "REST Api"],
   },
   {
     title: "Roof History",
@@ -163,27 +163,27 @@ export const servicesData = [
   {
     category: "Web Development",
     title: "Frontend Development",
-    desc: "I can provide the frontend to your application, whatever the prerequisites are. I have a couple of years of experience in the field and can provide you with clean and high performance code provided you have already a some sort of design or sketch I could develop and customize. Either way, my main purpose on the client side is to provide an unique UI and UX to your application and customers.",
+    desc: "I can provide the frontend for your application, regardless of the prerequisites. I have a couple of years of experience in the field and can create clean, high-performance code, whether you have a design or sketch already or need one created from scratch. My main goal on the client side is to deliver a unique UI and UX that enhances your application's value and delights your customers.    ",
   },
   {
     category: "Web Development",
     title: "Backend Development",
-    desc: "I'm fluent in creating and developing the backend and functionality of a web application using Firebase and DrizzleORM in Nextjs' environment. With these tools, I can provide you with a database and authentication with OAuth providers such as Google and Facebook or the usual email and password. ",
+    desc: "I am fluent in creating and developing the backend and functionality of a web application using Firebase and DrizzleORM in a Next.js environment. I am also capable of building and working with REST APIs. With these tools, I can provide a robust database and authentication system, including OAuth providers like Google and Facebook or traditional email and password authentication.",
   },
   {
     category: "Web Development",
     title: "Design Replication",
-    desc: "Thanks to my experience of website cloning, I'm fluent in creating and developing a web application from any sort of design or source. I'm not myself very much of a website designer, but with a little bit of an idea or explanation with a sketch or design I can make anything possible for your business' website.",
+    desc: "Thanks to my experience with website cloning, I'm fluent in creating and developing a web application from any design or source. I'm not primarily a website designer, but with a bit of direction, an idea, or a sketch, I can bring any vision to life for your business's website.",
   },
 ];
 
 export const aboutData = {
   shortDesc:
-    "I'm a software developer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
+    "A software developer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
   longDesc1:
-    "I'm 17 years old and speak fluently English, Swedish, Finnish and Norwegian and also a bit of German. I have been programming for around 3 years now. I initially began with game development using Pygame in Python but afterwards I graviated more into web development and have been passionated ever since about building beautiful web applications with Typescipt and Tailwind in Nextjs. Recently, on the other hand, I have been focusing more on the architecture of web apps and striving towards enhancing the perfomance between the client and backend in the most secure way. I've began learning about databases and authentication with Firebase and other SQL databases with DrizzleORM and OAuth services. ",
+    "I'm 17 years old and speak English, Swedish, Finnish, and Norwegian fluently, and also a bit of German. I have been programming for around 4 years now. I initially began with game development using Pygame in Python, but afterward, I gravitated more toward web development and have been passionate ever since about building beautiful web applications with TypeScript and Tailwind in Next.js. Recently, however, I have been focusing more on the architecture of web apps and striving to enhance the performance between the client and backend in the most secure way. I've started learning about databases and authentication with Firebase, SQL databases with DrizzleORM, and OAuth services.",
   longDesc2:
-    "Despite being in high school, I mostly spend my freetime programming and playing music. I also highly value health, so when I'm not in front of the computer or by my guitar I go to the gym and train untill I can't lift my arms anymore. Either way, I love learning and having fun with solving problems and hence this I belive I could be a great developer for your business. ",
+    "Despite being in high school, I mostly spend my free time programming and playing music. I also highly value health, so when I'm not in front of the computer or with my guitar, I go to the gym and train until I can't lift my arms anymore. Either way, I love learning and having fun solving problems, which is why I believe I could be a great developer for your business.",
 };
 
 export const CVData = {
