@@ -7,6 +7,7 @@ import {
   projectsData_2,
   servicesData,
   skillsData,
+  testimonialsData,
 } from "@/data";
 import ServiceBlock from "@/components/ServiceBlock";
 import Link from "next/link";
@@ -15,6 +16,7 @@ import ProjectCard from "@/components/ProjectCard";
 import GradientButton from "@/components/GradientButton";
 import Starfield from "@/components/StarBg";
 import ContactForm from "@/components/ContactForm";
+import TestimonialBlock from "@/components/TestimonialBlock";
 
 const Home = () => (
   <div className="min-h-screen">
@@ -44,7 +46,7 @@ const Home = () => (
       <div className="absolute left-[4%] top-1/3 flex rotate-45 flex-col gap-1 sm:left-[8%]">
         <Green />
       </div>
-      <div className="absolute bottom-[15%] right-[4%] flex -rotate-45 flex-col gap-1">
+      <div className="absolute bottom-[25%] right-[4%] flex -rotate-45 flex-col gap-1">
         <Green />
       </div>
       <div className="absolute left-[15%] top-[15%] flex -rotate-12 flex-col gap-1 md:left-[25%]">
@@ -111,8 +113,8 @@ const Home = () => (
     </div>
 
     {/* PORTFOLIO PAGE */}
-    <div id="portfolio" className="flex h-full flex-col gap-10 bg-[#1C1F23]">
-      <div className="flex flex-col gap-3 p-10 md:p-20">
+    <div id="portfolio" className="flex h-full flex-col gap-10 bg-[#110e1c] p-10 md:p-20">
+      <div className="flex flex-col gap-3 ">
         <div className="text-xs">Checkout My Portfolio</div>
         <div className="text-3xl font-bold">
           My{" "}
@@ -121,7 +123,7 @@ const Home = () => (
           </TextGradient>
         </div>
       </div>
-      <div className="grid w-fit gap-14 self-center px-5 lg:grid-cols-2">
+      <div className="grid w-fit gap-14 lg:grid-cols-2 self-center">
         {projectsData_2.map((project, i) => (
           <ProjectCard
             key={i}
@@ -134,10 +136,41 @@ const Home = () => (
           />
         ))}
       </div>
-      {/* <Carousel /> */}
+      <div className="mt-5 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
+        Testimonials
+        <SVG
+          src="/svg/arrow.svg"
+          className="h-5 w-5 rotate-90 fill-indigo-500"
+          loader={<div className="h-5 w-5" />}
+        />
+      </div>
+    </div>
+
+    {/* TESTIMONIALS */}
+    <div
+      id="testimonials"
+      className="flex h-full flex-col gap-10  bg-[#020817]"
+    >
+      <div className="flex flex-col gap-10 p-10 lg:p-20">
+        <div className="flex flex-col gap-3">
+          <div className="text-xs">What Others Say</div>
+          <div className="text-3xl font-bold">
+            <TextGradient color="from-indigo-500 to-purple-500">
+              Testimonials
+            </TextGradient>
+          </div>
+        </div>
+
+        <div className="relative grid w-full gap-10  overflow-hidden rounded-2xl bg-[#100d25] p-5 md:grid-cols-2 md:p-10 xl:grid-cols-3">
+          {testimonialsData.map((obj, i) => (
+            <TestimonialBlock key={i} testimonial={obj} />
+          ))}
+          <div className="absolute left-0 top-0 z-0 h-[250px] w-full rounded-b-[30px] bg-[#151030]" />
+        </div>
+      </div>
 
       <div className="mt-5 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
-        About Me
+        Who am I
         <SVG
           src="/svg/arrow.svg"
           className="h-5 w-5 rotate-90 fill-indigo-500"
@@ -149,7 +182,7 @@ const Home = () => (
     {/* ___________ */}
     {/* ABOUT */}
     {/* ___________ */}
-    <div id="about" className="flex min-h-screen flex-col bg-[#16151D]">
+    <div id="about" className="flex min-h-screen flex-col bg-[#110e1c]">
       <div className="flex flex-col items-center gap-20 p-10 md:p-20">
         <div className="flex flex-col-reverse gap-10 lg:flex-row">
           <div className=" block h-[300px] w-[300px] self-center">
@@ -191,7 +224,7 @@ const Home = () => (
         {/* __________*/}
         {/* CV RESUME */}
         {/* _________ */}
-        <div className="flex flex-col gap-10">
+        <div className="flex w-full flex-col gap-10">
           <div className="flex flex-col gap-3 self-start">
             <div className="text-xs">My Journey</div>
             <div className="text-3xl font-bold">
@@ -352,8 +385,7 @@ const CVBlock = ({
   isLast?: boolean;
 }) => (
   <div className="flex gap-5">
-    <div className="hidden w-36 text-nowrap pt-2.5 text-end font-bold text-white/80 sm:block">
-      {" "}
+    <div className="hidden min-w-28 text-nowrap pt-2.5 text-end font-bold text-white/80 sm:block">
       {date}
     </div>
     <div className="flex flex-col items-center">

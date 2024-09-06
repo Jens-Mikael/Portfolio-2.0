@@ -16,7 +16,6 @@ const Navbar = () => {
           {/* LOGO */}
           <div className="font-bold">
             <span className="inline md:hidden lg:inline">Jens-Mikael</span>
-            <span className="hidden md:inline lg:hidden">J-M</span>
 
             <TextGradient color="from-indigo-500 to-purple-500">
               {" "}

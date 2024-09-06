@@ -25,21 +25,21 @@ export default function ProjectCard({
 
   return (
     <CardContainer className="inter-var h-full">
-      <CardBody className="group/card relative flex h-full w-auto max-w-xl flex-col rounded-xl border  p-6 transition-all border-white/[0.2] bg-[#16151D] hover:shadow-2xl hover:shadow-indigo-700/[0.4] ">
+      <CardBody  className="group/card relative flex h-full w-auto max-w-3xl flex-col rounded-xl border  p-6 transition-all border-white/[0.2] bg-[#100f19] hover:shadow-2xl hover:shadow-indigo-700/[0.4] ">
         <CardItem
-          translateZ="50"
+          translateZ="30"
           className="text-xl font-bold text-white"
         >
           {title}
         </CardItem>
         <CardItem
           as="p"
-          translateZ="60"
+          translateZ="40"
           className="mt-2 max-w-sm text-sm text-neutral-300"
         >
           {description}{" "}
         </CardItem>
-        <CardItem translateZ="100" className="mt-4 w-full relative">
+        <CardItem translateZ="50" className="mt-4 w-full relative">
           <Image
             src={src}
             height="1000"
@@ -53,7 +53,7 @@ export default function ProjectCard({
           {tools.map((tool) => (
             <CardItem
               key={tool}
-              translateZ={50}
+              translateZ={40}
               target="__blank"
               className="rounded-lg bg-indigo-500/10 px-3 py-1 text-sm text-indigo-500"
             >
@@ -64,7 +64,7 @@ export default function ProjectCard({
         <div className="mt-5 flex items-center justify-between">
           {github && (
             <CardItem
-              translateZ={50}
+              translateZ={30}
               as={Link}
               href={github || ""}
               target="__blank"
@@ -76,7 +76,7 @@ export default function ProjectCard({
           )}
           {link && (
             <CardItem
-              translateZ={40}
+              translateZ={30}
               as={Link}
               href={link || ""}
               target="__blank"

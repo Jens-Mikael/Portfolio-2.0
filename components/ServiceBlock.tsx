@@ -17,7 +17,7 @@ const ServiceBlock = ({
   const id = title.replace(/\s+/g, "");
 
   return (
-    <div className="flex h-fit w-full max-w-2xl flex-col gap-5 rounded-2xl bg-white/5 p-10 lg:p-8 xl:p-12">
+    <div className="flex h-fit w-full lg:max-w-2xl flex-col gap-5 rounded-2xl bg-white/5 p-10 lg:p-8 xl:p-12">
       <div className="text-sm">{category}</div>
       <div className="text-2xl font-medium">{title}</div>
       <div
@@ -25,7 +25,7 @@ const ServiceBlock = ({
         style={{
           height: isOpen ? document.querySelector(`#${id}`)?.scrollHeight : 70,
         }}
-        className={`grid overflow-hidden font-extralight transition-[height] ${!isOpen && "line-clamp-3"}`}
+        className={`grid overflow-hidden font-extralight break-words transition-[height] ${!isOpen && "line-clamp-3"}`}
       >
         {desc}
       </div>

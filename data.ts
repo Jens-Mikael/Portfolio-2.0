@@ -6,6 +6,7 @@ import RoofImage from "./public/projects/roof.png";
 import TeslaImage from "./public/projects/tesla.png";
 import WorkoutImage from "./public/projects/workout.png";
 import YoutubeImage from "./public/projects/youtube.png";
+import DanSveenPfp from "./public/testimonials/dsveen.webp";
 
 export const projectsData = [
   {
@@ -201,6 +202,11 @@ export const CVData = {
   ],
   experience: [
     {
+      title: "Freelancer - Self Employed",
+      date: "2023 - Now",
+      desc: "I have been working with numerous client and collaborated with passionate software engineers in the industry. ",
+    },
+    {
       title: "Shop Employee - SOK",
       date: "2023 - 2023",
       desc: "A two week long summer job period at my local grocery store.",
@@ -212,3 +218,13 @@ export const CVData = {
     },
   ],
 };
+
+export const testimonialsData = [
+  {
+    quote:
+      "I recently hired Jens to develop the backend for my website and couldn't be more pleased with the robust, efficient, and scalable results. Jens maintained seamless communication, provided valuable insights, and I highly recommend their high-quality backend development services.",
+    name: "Dan Sveen",
+    title: "CEO and Founder of Roof History",
+    pfpSrc: DanSveenPfp,
+  },
+];
