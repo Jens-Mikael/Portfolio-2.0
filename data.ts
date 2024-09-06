@@ -179,7 +179,7 @@ export const servicesData = [
 
 export const aboutData = {
   shortDesc:
-    "A software developer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
+    "I'm software developer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
   longDesc1:
     "I'm 17 years old and speak English, Swedish, Finnish, and Norwegian fluently, and also a bit of German. I have been programming for around 4 years now. I initially began with game development using Pygame in Python, but afterward, I gravitated more toward web development and have been passionate ever since about building beautiful web applications with TypeScript and Tailwind in Next.js. Recently, however, I have been focusing more on the architecture of web apps and striving to enhance the performance between the client and backend in the most secure way. I've started learning about databases and authentication with Firebase, SQL databases with DrizzleORM, and OAuth services.",
   longDesc2:
