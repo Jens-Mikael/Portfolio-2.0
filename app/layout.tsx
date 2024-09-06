@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Stjernberg Web and IT Services",
+  title: "Stjernberg Web and IT Services | Jens-Mikael Stjernberg",
   description:
     "My web development portfolio where I showcase my skills, past projects and services",
 };
