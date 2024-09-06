@@ -294,7 +294,7 @@ const Home = () => (
     {/* SERVICES */}
     {/* ___________ */}
     <div id="services" className="flex flex-col bg-[#050816]">
-      <div className="flex flex-1 flex-col gap-10 p-10 md:p-20 lg:gap-20">
+      <div className="flex flex-1 flex-col gap-10 p-5 sm:p-10 md:p-20 lg:gap-20">
         <div className="flex flex-col gap-3">
           <div className="text-xs">Services I Offer to my Clients</div>
           <div className="text-3xl font-bold">

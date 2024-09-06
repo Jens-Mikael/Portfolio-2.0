@@ -7,20 +7,16 @@ import MobileTap from "./MobileTap";
 import Image from "next/image";
 import NavbarNav from "./NavbarNav";
 
-const Sidebar = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+const Sidebar = ({
+  sidebarOpen,
+  setSidebarOpen,
+}: {
+  sidebarOpen: boolean;
+  setSidebarOpen: (value: boolean) => void;
+}) => {
   const pathname = usePathname();
   return (
     <>
-      {/* HAM BUTTON */}
-      <MobileTap onClick={() => setSidebarOpen(true)} className="md:hidden">
-        <SVG
-          src="/svg/menu.svg"
-          className="h-6 w-6 fill-white"
-          loader={<div className="h-6 w-6" />}
-        />
-      </MobileTap>
-
       {/* SIDEBAR */}
       <div
         className={` fixed inset-y-0 right-0 z-30 flex transition duration-500 md:hidden ${
@@ -34,7 +30,7 @@ const Sidebar = () => {
       </div>
       <div
         onClick={() => setSidebarOpen(false)}
-        className={`fixed inset-0 left-0 top-0 transition-all md:hidden ${sidebarOpen ? "z-20 backdrop-blur-md lg:-z-20" : "-z-20 backdrop-blur-none"}`}
+        className={`fixed inset-0 left-0 top-0 transition-all md:hidden ${sidebarOpen ? "z-20 backdrop-blur-md lg:-z-50" : "-z-10  backdrop-blur-none"}`}
       />
     </>
   );
