@@ -113,7 +113,10 @@ const Home = () => (
     </div>
 
     {/* PORTFOLIO PAGE */}
-    <div id="portfolio" className="flex h-full flex-col gap-10 bg-[#110e1c] p-10 md:p-20">
+    <div
+      id="portfolio"
+      className="flex h-full flex-col gap-10 bg-[#110e1c] p-5 sm:p-10 lg:p-20"
+    >
       <div className="flex flex-col gap-3 ">
         <div className="text-xs">Checkout My Portfolio</div>
         <div className="text-3xl font-bold">
@@ -123,7 +126,7 @@ const Home = () => (
           </TextGradient>
         </div>
       </div>
-      <div className="grid w-fit gap-14 lg:grid-cols-2 self-center">
+      <div className="grid w-fit gap-14 self-center lg:grid-cols-2">
         {projectsData_2.map((project, i) => (
           <ProjectCard
             key={i}
@@ -151,7 +154,7 @@ const Home = () => (
       id="testimonials"
       className="flex h-full flex-col gap-10  bg-[#020817]"
     >
-      <div className="flex flex-col gap-10 p-10 lg:p-20">
+      <div className="flex flex-col gap-10 p-5 sm:p-10 md:p-20">
         <div className="flex flex-col gap-3">
           <div className="text-xs">What Others Say</div>
           <div className="text-3xl font-bold">

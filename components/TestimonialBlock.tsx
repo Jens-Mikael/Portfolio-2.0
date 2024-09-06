@@ -12,7 +12,7 @@ export default function TestimonialBlock({
   };
 }) {
   return (
-    <div className="z-10 flex flex-col gap-10 rounded-2xl bg-[#090325] p-10">
+    <div className="z-10 flex flex-col gap-10 rounded-2xl bg-[#090325] p-5 sm:p-10">
       <FaQuoteLeft className="h-[40px] w-[40px]" />
       <div className="text-lg font-medium">{testimonial.quote}</div>
       <div className="flex items-center justify-between gap-5">
