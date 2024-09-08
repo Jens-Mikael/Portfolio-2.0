@@ -46,6 +46,14 @@ const Navbar = () => {
               <Link href={"https://github.com/Jens-Mikael"}>
                 <Image alt="li" src="/svg/github.svg" height={20} width={20} />
               </Link>
+              {/* <Link href={"https://www.instagram.com/jensmikael.stjernberg/"}>
+                <Image
+                  alt="li"
+                  src="/svg/instagram.svg"
+                  height={20}
+                  width={20}
+                />
+              </Link> */}
               {/* HAM BUTTON */}
               <MobileTap
                 onClick={() => setSidebarOpen(true)}

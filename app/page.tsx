@@ -300,7 +300,7 @@ const Home = () => (
           <div className="text-3xl font-bold">
             My Best{" "}
             <TextGradient color="from-indigo-500 to-purple-500">
-              Service
+              Services
             </TextGradient>
           </div>
         </div>
