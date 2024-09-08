@@ -330,7 +330,7 @@ const Home = () => (
     {/* ___________ */}
     {/* CONTACT */}
     {/* ___________ */}
-    <div id="contact" className="flex min-h-screen flex-col gap-16">
+    <div id="contact" className="flex flex-col gap-16">
       <Starfield />
       <div className="flex flex-1 flex-col gap-16 p-10 md:p-20 lg:flex-row">
         <div className="flex flex-1 flex-col gap-10">
@@ -348,15 +348,10 @@ const Home = () => (
               <TextGradient color="from-indigo-500 to-purple-500">
                 {"<> "}
               </TextGradient>
-              I am open to any sorts of freelance job offers. Due to me being
-              still in high school, my free time is limited and I only accept
-              offers related to freelancing where I can grow and offer quality
-              work
+              I am open to any sort of freelance job offers. Since I am still in high school, my free time is limited, so I only accept freelancing opportunities where I can grow and provide quality work.
               <br />
               <br />
-              Anyhow, have an exiting project you need help with? Send me an
-              email or contact me via Whatsapp! I&apos;ll be happy to hear from
-              you!
+              Do you have an exciting project you need help with? Send me an email or contact me via WhatsApp! I&apos;d be happy to hear from you!
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
@@ -365,7 +360,7 @@ const Home = () => (
         </div>
 
         <div className="flex flex-1 items-center lg:justify-center">
-          <div className="w-full max-w-2xl rounded-xl bg-[#100d25] p-5 sm:p-10">
+          <div className="w-full lg:max-w-2xl rounded-xl bg-[#100d25] p-5 sm:p-10">
             <ContactForm />
           </div>
         </div>
