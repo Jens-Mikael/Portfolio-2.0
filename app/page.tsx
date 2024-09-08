@@ -46,7 +46,7 @@ const Home = () => (
       <div className="absolute left-[4%] top-1/3 flex rotate-45 flex-col gap-1 sm:left-[8%]">
         <Green />
       </div>
-      <div className="absolute bottom-[25%] right-[4%] flex -rotate-45 flex-col gap-1">
+      <div className="absolute bottom-[20%] right-[4%] flex -rotate-45 flex-col gap-1">
         <Green />
       </div>
       <div className="absolute left-[15%] top-[15%] flex -rotate-12 flex-col gap-1 md:left-[25%]">
