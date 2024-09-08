@@ -186,9 +186,9 @@ const Home = () => (
     {/* ABOUT */}
     {/* ___________ */}
     <div id="about" className="flex min-h-screen flex-col bg-[#110e1c]">
-      <div className="flex flex-col items-center gap-20 p-10 md:p-20">
+      <div className="flex flex-col items-center gap-20 p-5 sm:p-10 md:p-20">
         <div className="flex flex-col-reverse gap-10 lg:flex-row">
-          <div className=" block h-[300px] w-[300px] self-center">
+          <div className=" block aspect-square w-full max-w-[300px] self-center">
             <Image
               alt="gtr"
               src="/images/guitar.jpg"
@@ -332,7 +332,7 @@ const Home = () => (
     {/* ___________ */}
     <div id="contact" className="flex flex-col gap-16">
       <Starfield />
-      <div className="flex flex-1 flex-col gap-16 p-10 md:p-20 lg:flex-row">
+      <div className="flex flex-1 flex-col gap-16 p-5 sm:p-10 md:p-20 lg:flex-row">
         <div className="flex flex-1 flex-col gap-10">
           <div className="flex flex-col gap-3">
             <div className="text-xs">Get in touch</div>
