@@ -83,7 +83,7 @@ const Footer = () => (
             href="https://www.finder.fi/"
             className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
           >
-            <BiBriefcase />
+            <BiBriefcase className="min-w-4 min-h-4" />
             Stjernberg Web and IT Services <br />
             3469579-5
 
