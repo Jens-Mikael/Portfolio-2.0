@@ -83,18 +83,17 @@ const Footer = () => (
             href="https://www.finder.fi/"
             className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
           >
-            <BiBriefcase className="min-w-4 min-h-4" />
+            <BiBriefcase className="min-h-4 min-w-4" />
             Stjernberg Web and IT Services <br />
             3469579-5
-
           </Link>
         </div>
       </div>
     </div>
     <div className="w-full border-t border-white/50" />
     <div className="text-center text-xs font-medium text-white/70">
-      Built with Passion & Commitment in Next.js © Copyright 2024. All Rights
-      Reserved{" "}
+      Built with Passion & Commitment in Next.js © 2024 Stjernberg Web and IT
+      Services
     </div>
   </div>
 );

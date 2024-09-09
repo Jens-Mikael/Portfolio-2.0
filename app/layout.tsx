@@ -5,14 +5,14 @@ import Providers from "../components/providers";
 import Navbar from "../components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Stjernberg Web and IT Services | Jens-Mikael Stjernberg",
   description:
-    "My web development portfolio where I showcase my skills, past projects and services",
+    "I'm a software engineer and a web developer. This is my personal portfolioe where I showcase my skills, past projects and services",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Analytics />
-          <SpeedInsights/>
+          <SpeedInsights />
           <Toaster />
         </body>
       </Providers>
