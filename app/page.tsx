@@ -270,7 +270,7 @@ const Home = () => (
             </div>
           </div>
         </div>
-        {/* <MobileTap className="group flex w-fit items-center gap-2 self-end rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
+        <Link download href="/Jens-Mikael_Stjernberg_CV.pdf" className="group flex w-fit items-center gap-2 self-end rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
           PDF{" "}
           <Image
             src="/svg/arrow.svg"
@@ -279,7 +279,7 @@ const Home = () => (
             width={20}
             className="rotate-90 transition-transform group-hover:translate-y-1"
           />
-        </MobileTap> */}
+        </Link>
       </div>
       <div className="mt-10 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
         My Services
