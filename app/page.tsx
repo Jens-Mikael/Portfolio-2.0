@@ -17,6 +17,7 @@ import GradientButton from "@/components/GradientButton";
 import Starfield from "@/components/StarBg";
 import ContactForm from "@/components/ContactForm";
 import TestimonialBlock from "@/components/TestimonialBlock";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const Home = () => (
   <div className="min-h-screen">
@@ -98,7 +99,10 @@ const Home = () => (
           ))}
         </div>
         <Link href="#contact">
-          <GradientButton>Get In Touch</GradientButton>
+          <GradientButton>
+            Get In Touch{" "}
+            <IoIosArrowRoundForward className="h-6 w-6 transition-transform group-hover:translate-x-2" />
+          </GradientButton>
         </Link>
       </div>
       {/* BOTTOM NAV */}
@@ -270,15 +274,17 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <Link download href="/Jens-Mikael_Stjernberg_CV.pdf" className="group flex w-fit items-center gap-2 self-end rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-3 text-sm transition-transform hover:scale-105">
-          PDF{" "}
-          <Image
-            src="/svg/arrow.svg"
-            alt="ar"
-            height={20}
-            width={20}
-            className="rotate-90 transition-transform group-hover:translate-y-1"
-          />
+        <Link download href="/Jens-Mikael_Stjernberg_CV.pdf">
+          <GradientButton>
+            Download CV{" "}
+            <Image
+              src="/svg/arrow.svg"
+              alt="ar"
+              height={20}
+              width={20}
+              className="rotate-90 transition-transform group-hover:translate-y-1"
+            />
+          </GradientButton>
         </Link>
       </div>
       <div className="mt-10 flex flex-col items-center justify-center p-2 text-xs font-light text-indigo-500">
@@ -348,10 +354,14 @@ const Home = () => (
               <TextGradient color="from-indigo-500 to-purple-500">
                 {"<> "}
               </TextGradient>
-              I am open to any sort of freelance job offers. Since I am still in high school, my free time is limited, so I only accept freelancing opportunities where I can grow and provide quality work.
+              I am open to any sort of freelance job offers. Since I am still in
+              high school, my free time is limited, so I only accept freelancing
+              opportunities where I can grow and provide quality work.
               <br />
               <br />
-              Do you have an exciting project you need help with? Send me an email or contact me via WhatsApp! I&apos;d be happy to hear from you!
+              Do you have an exciting project you need help with? Send me an
+              email or contact me via WhatsApp! I&apos;d be happy to hear from
+              you!
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
@@ -360,7 +370,7 @@ const Home = () => (
         </div>
 
         <div className="flex flex-1 items-center lg:justify-center">
-          <div className="w-full lg:max-w-2xl rounded-xl bg-[#100d25] p-5 sm:p-10">
+          <div className="w-full rounded-xl bg-[#100d25] p-5 sm:p-10 lg:max-w-2xl">
             <ContactForm />
           </div>
         </div>
