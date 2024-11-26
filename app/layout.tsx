@@ -10,9 +10,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Stjernberg Web and IT Services | Jens-Mikael Stjernberg",
+  title:
+    "Stjernberg Web and IT Services | Expert Web Developer from Finland | Next.js, Node.js React.js Firebase",
   description:
-    "I'm a software engineer and a web developer. This is my personal portfolioe where I showcase my skills, past projects and services",
+    "Jens Mikael, a skilled 17-year-old web developer from Finland, fluent in English, Swedish, Finnish, and Norwegian, with a passion for building secure, high-performance web applications using Next.js, Tailwind CSS, Node.js, and DrizzleORM. Explore a diverse portfolio featuring design replications, robust backends, and innovative projects, showcasing expertise in frontend and backend development, authentication systems, and database management. Connect with a developer dedicated to creating meaningful digital solutions.",
 };
 
 export default function RootLayout({
@@ -24,11 +25,13 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body className={`${inter.className} relative min-h-screen text-white`}>
-          <Navbar />
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <Toaster />
+          <main>
+            <Navbar />
+            {children}
+            <Analytics />
+            <SpeedInsights />
+            <Toaster />
+          </main>
         </body>
       </Providers>
     </html>
