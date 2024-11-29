@@ -20,14 +20,14 @@ const Navbar = () => {
           </div>
           <div className="flex h-full w-full justify-between px-5 py-4 sm:px-7 md:px-12 lg:px-16 xl:px-24">
             {/* LOGO */}
-            <div className="font-bold">
+            <h2 className="font-bold">
               <span className="inline md:hidden lg:inline">Jens-Mikael</span>
 
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" "}
                 Stjernberg
               </TextGradient>
-            </div>
+            </h2>
 
             {/* MEDIA AND HAM */}
             <div className="flex items-center gap-5">
