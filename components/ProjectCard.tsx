@@ -28,10 +28,11 @@ export default function ProjectCard({
       <CardBody  className="group/card relative flex h-full w-auto max-w-3xl flex-col rounded-xl border  p-6 transition-all border-white/[0.2] bg-[#100f19] hover:shadow-2xl hover:shadow-indigo-700/[0.4] ">
         <CardItem
           translateZ="30"
+          as="h2"
           className="text-xl font-bold text-white"
         >
           {title}
-        </CardItem>
+        </CardItem>x
         <CardItem
           as="p"
           translateZ="40"

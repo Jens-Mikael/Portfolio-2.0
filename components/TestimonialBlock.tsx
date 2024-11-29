@@ -20,9 +20,9 @@ export default function TestimonialBlock({
           <div className="flex flex-wrap items-center gap-1 text-lg font-bold">
             <span className="text-sky-500">@</span> {testimonial.name}
           </div>
-          <div className="text-xs italic text-white/70">
+          <p className="text-xs italic text-white/70">
             {testimonial.title}{" "}
-          </div>
+          </p>
         </div>
         <div className="relative aspect-square min-h-16 min-w-16 overflow-hidden rounded-full">
           <Image src={testimonial.pfpSrc} fill alt="pfp" />

@@ -67,13 +67,13 @@ const Home = () => (
             className=" mb-5 rounded-full"
           />
         </div>
-        <div className="text-3xl font-bold">
+        <h1 className="text-3xl font-bold">
           Hi, I&apos;m
           <TextGradient color="from-indigo-500 to-purple-500">
             {" <Jens-Mikael Stjernberg />"}
           </TextGradient>
-        </div>
-        <div className="w-full max-w-md font-extralight">
+        </h1>
+        <p className="w-full max-w-md font-extralight">
           <TextGradient color="from-indigo-500 to-purple-500">
             {"<> "}
           </TextGradient>{" "}
@@ -81,7 +81,7 @@ const Home = () => (
           <TextGradient color="from-indigo-500 to-purple-500">
             {" </>"}
           </TextGradient>
-        </div>
+        </p>
         <div className="flex flex-wrap items-center justify-center gap-2">
           {skillsData.map((skill, i) => (
             <div
@@ -123,12 +123,12 @@ const Home = () => (
     >
       <div className="flex flex-col gap-3 ">
         <div className="text-xs">Checkout My Portfolio</div>
-        <div className="text-3xl font-bold">
+        <h1 className="text-3xl font-bold">
           My{" "}
           <TextGradient color="from-indigo-500 to-purple-500">
             Amazing Work
           </TextGradient>
-        </div>
+        </h1>
       </div>
       <div className="grid w-fit gap-14 self-center lg:grid-cols-2">
         {projectsData_2.map((project, i) => (
@@ -160,7 +160,7 @@ const Home = () => (
     >
       <div className="flex flex-col gap-10 p-5 sm:p-10 md:p-20">
         <div className="flex flex-col gap-3">
-          <div className="text-xs">What Others Say</div>
+          <h1 className="text-xs">What Others Say</h1>
           <div className="text-3xl font-bold">
             <TextGradient color="from-indigo-500 to-purple-500">
               Testimonials
@@ -205,13 +205,13 @@ const Home = () => (
           <div className="flex flex-1 flex-col gap-10">
             {/* HEADING */}
             <div className="flex flex-col gap-3">
-              <div className="text-xs">About me</div>
-              <div className="text-3xl font-bold">
+              <p className="text-xs">About me</p>
+              <h1 className="text-3xl font-bold">
                 Jens-Mikael{" "}
                 <TextGradient color="from-indigo-500 to-purple-500">
                   Stjernberg
                 </TextGradient>
-              </div>
+              </h1>
             </div>
             {/* DESC */}
             <div className="max-w-2xl font-extralight">
@@ -234,17 +234,17 @@ const Home = () => (
         <div className="flex w-full flex-col gap-10">
           <div className="flex flex-col gap-3 self-start">
             <div className="text-xs">My Journey</div>
-            <div className="text-3xl font-bold">
+            <h1 className="text-3xl font-bold">
               My{" "}
               <TextGradient color="from-indigo-500 to-purple-500">
                 CV Resume
               </TextGradient>
-            </div>
+            </h1>
           </div>
           <div className="flex flex-col gap-16 lg:flex-row lg:gap-10">
             {/* EDUCATION */}
             <div className="flex flex-1 flex-col gap-10">
-              <div className="text-2xl font-bold">Education</div>
+              <h2 className="text-2xl font-bold">Education</h2>
               <div>
                 {CVData.education.map((obj, i) => (
                   <CVBlock
@@ -259,7 +259,7 @@ const Home = () => (
             </div>
             {/* EXPERIENCE */}
             <div className="flex flex-1 flex-col gap-10">
-              <div className="text-2xl font-bold">Experience</div>
+              <h2 className="text-2xl font-bold">Experience</h2>
               <div>
                 {CVData.experience.map((obj, i) => (
                   <CVBlock
@@ -302,13 +302,13 @@ const Home = () => (
     <div id="services" className="flex flex-col bg-[#050816]">
       <div className="flex flex-1 flex-col gap-10 p-5 sm:p-10 md:p-20 lg:gap-20">
         <div className="flex flex-col gap-3">
-          <div className="text-xs">Services I Offer to my Clients</div>
-          <div className="text-3xl font-bold">
+          <p className="text-xs">Services I Offer to my Clients</p>
+          <h1 className="text-3xl font-bold">
             My Best{" "}
             <TextGradient color="from-indigo-500 to-purple-500">
               Services
             </TextGradient>
-          </div>
+          </h1>
         </div>
 
         {/* CONTENT */}
@@ -341,16 +341,16 @@ const Home = () => (
       <div className="flex flex-1 flex-col gap-16 p-5 sm:p-10 md:p-20 lg:flex-row">
         <div className="flex flex-1 flex-col gap-10">
           <div className="flex flex-col gap-3">
-            <div className="text-xs">Get in touch</div>
-            <div className="text-3xl font-bold">
+            <p className="text-xs">Get in touch</p>
+            <h1 className="text-3xl font-bold">
               Available for{" "}
               <TextGradient color="from-indigo-500 to-purple-500">
                 Freelance Opportunities
               </TextGradient>
-            </div>
+            </h1>
           </div>
           <div className="flex-1 ">
-            <div className="w-full max-w-xl font-extralight">
+            <p className="w-full max-w-xl font-extralight">
               <TextGradient color="from-indigo-500 to-purple-500">
                 {"<> "}
               </TextGradient>
@@ -365,7 +365,7 @@ const Home = () => (
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
-            </div>
+            </p>
           </div>
         </div>
 
@@ -403,9 +403,9 @@ const CVBlock = ({
     </div>
     <div className={`${!isLast && "mb-14"} flex w-full flex-col gap-7`}>
       <div className="flex flex-col gap-3 rounded-xl border border-white/20 bg-white/5 p-5">
-        <div className="text-lg font-medium">{title}</div>
-        <div className="text-sm font-light">{desc}</div>
-        <div className="block font-bold text-white/80 sm:hidden">{date}</div>
+        <h3 className="text-lg font-medium">{title}</h3>
+        <p className="text-sm font-light">{desc}</p>
+        <p className="block font-bold text-white/80 sm:hidden">{date}</p>
       </div>
     </div>
   </div>
