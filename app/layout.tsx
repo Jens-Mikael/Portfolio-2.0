@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,17 +23,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Providers>
-        <body className={`${inter.className} relative min-h-screen text-white`}>
-          <main>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NJ7Z3HTEG9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-NJ7Z3HTEG9');
+          `}
+        </Script>
+      </head>
+      <body className={`${inter.className} relative min-h-screen text-white`}>
+        <main>
+          <Providers>
             <Navbar />
             {children}
             <Analytics />
             <SpeedInsights />
             <Toaster />
-          </main>
-        </body>
-      </Providers>
+          </Providers>
+        </main>
+      </body>
     </html>
   );
 }
