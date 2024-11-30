@@ -32,7 +32,7 @@ export default function ProjectCard({
           className="text-xl font-bold text-white"
         >
           {title}
-        </CardItem>x
+        </CardItem>
         <CardItem
           as="p"
           translateZ="40"
