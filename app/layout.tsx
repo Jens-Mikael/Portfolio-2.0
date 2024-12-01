@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
+import { CSPostHogProvider } from "./Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,17 +39,19 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${inter.className} relative min-h-screen text-white`}>
-        <main>
-          <Providers>
-            <Navbar />
-            {children}
-            <Analytics />
-            <SpeedInsights />
-            <Toaster />
-          </Providers>
-        </main>
-      </body>
+      <CSPostHogProvider>
+        <body className={`${inter.className} relative min-h-screen text-white`}>
+          <main>
+            <Providers>
+              <Navbar />
+              {children}
+              <Analytics />
+              <SpeedInsights />
+              <Toaster />
+            </Providers>
+          </main>
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
