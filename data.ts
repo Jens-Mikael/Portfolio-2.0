@@ -7,6 +7,9 @@ import TeslaImage from "./public/projects/tesla.png";
 import WorkoutImage from "./public/projects/workout.png";
 import YoutubeImage from "./public/projects/youtube.png";
 import DanSveenPfp from "./public/testimonials/dsveen.webp";
+import HannuValvePfp from "./public/testimonials/hannuValve.png";
+import HarvaliPfp from "./public/testimonials/harriVaelilae.png";
+
 
 export const projectsData = [
   {
@@ -64,9 +67,9 @@ export const projectsData_2 = [
     description:
       "A self-help learning portal website with blog lessons, video lectures and a respectful, encouraging and strongly connected community.",
     github: "",
-    link: "",
+    link: "http://eskimovillage.com",
     src: EskimoImage,
-    tools: ["Nextjs", "Tailwind", "Cloudflare", "Matrix", "REST Api"],
+    tools: ["Nextjs", "Tailwind", "Cloudflare", "Shadcn", "REST API"],
   },
   {
     title: "Roof History",
@@ -226,5 +229,22 @@ export const testimonialsData = [
     name: "Dan Sveen",
     title: "CEO and Founder of Roof History",
     pfpSrc: DanSveenPfp,
+    link: "https://www.linkedin.com/in/dsveen/",
   },
+  {
+    quote:
+      "Working with Jens was a fantastic experience—they were detail-oriented, proactive in solving challenges, and ensured smooth communication throughout. Their dedication and commitment made the entire project seamless and enjoyable.",
+    name: "Hannu Valve",
+    title: "CEO of Hexer Network",
+    pfpSrc: HannuValvePfp,
+    link: "https://www.linkedin.com/in/hannuvalve/",
+  },
+  // {
+  //   quote:
+  //     "Working with Jens was a fantastic experience—they were detail-oriented, proactive in solving challenges, and ensured smooth communication throughout. Their dedication and commitment made the entire project seamless and enjoyable.",
+  //   name: "Harri Vaelilae",
+  //   title: "CEO of OnePointCode",
+  //   pfpSrc: HarvaliPfp,
+  //   link: "https://www.linkedin.com/in/harvali/",
+  // },
 ];

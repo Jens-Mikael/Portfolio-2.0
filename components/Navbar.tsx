@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <div className="fixed inset-x-0 z-20 ">
-        <div className="realtive flex items-center justify-center bg-black/40">
+        <div className="realtive flex items-center justify-center bg-black/50">
           <div className="absolute hidden text-sm md:block">
             <NavbarNav />
           </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="h-8 bg-gradient-to-b from-black/40 to-black/0 " />
+        <div className="h-8 bg-gradient-to-b from-black/50 to-black/0 " />
       </div>
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
     </>

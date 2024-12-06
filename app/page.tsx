@@ -123,12 +123,12 @@ const Home = () => (
     >
       <div className="flex flex-col gap-3 ">
         <div className="text-xs">Checkout My Portfolio</div>
-        <h1 className="text-3xl font-bold">
+        <h2 className="text-3xl font-bold">
           My{" "}
           <TextGradient color="from-indigo-500 to-purple-500">
-            Amazing Work
+            Projects
           </TextGradient>
-        </h1>
+        </h2>
       </div>
       <div className="grid w-fit gap-14 self-center lg:grid-cols-2">
         {projectsData_2.map((project, i) => (
@@ -160,15 +160,15 @@ const Home = () => (
     >
       <div className="flex flex-col gap-10 p-5 sm:p-10 md:p-20">
         <div className="flex flex-col gap-3">
-          <h1 className="text-xs">What Others Say</h1>
+          <h2 className="text-xs">What Others Say</h2>
           <div className="text-3xl font-bold">
             <TextGradient color="from-indigo-500 to-purple-500">
               Testimonials
             </TextGradient>
           </div>
         </div>
-
-        <div className="relative grid w-full gap-10  overflow-hidden rounded-2xl bg-[#100d25] p-5 md:grid-cols-2 md:p-10 xl:grid-cols-3">
+{/* xl:grid-cols-3 */}
+        <div className="relative grid w-full gap-10  overflow-hidden rounded-2xl bg-[#100d25] p-5 lg:grid-cols-2 md:p-10 "> 
           {testimonialsData.map((obj, i) => (
             <TestimonialBlock key={i} testimonial={obj} />
           ))}
@@ -206,12 +206,12 @@ const Home = () => (
             {/* HEADING */}
             <div className="flex flex-col gap-3">
               <p className="text-xs">About me</p>
-              <h1 className="text-3xl font-bold">
+              <h2 className="text-3xl font-bold">
                 Jens-Mikael{" "}
                 <TextGradient color="from-indigo-500 to-purple-500">
                   Stjernberg
                 </TextGradient>
-              </h1>
+              </h2>
             </div>
             {/* DESC */}
             <div className="max-w-2xl font-extralight">
@@ -234,12 +234,12 @@ const Home = () => (
         <div className="flex w-full flex-col gap-10">
           <div className="flex flex-col gap-3 self-start">
             <div className="text-xs">My Journey</div>
-            <h1 className="text-3xl font-bold">
+            <h2 className="text-3xl font-bold">
               My{" "}
               <TextGradient color="from-indigo-500 to-purple-500">
                 CV Resume
               </TextGradient>
-            </h1>
+            </h2>
           </div>
           <div className="flex flex-col gap-16 lg:flex-row lg:gap-10">
             {/* EDUCATION */}
@@ -303,12 +303,12 @@ const Home = () => (
       <div className="flex flex-1 flex-col gap-10 p-5 sm:p-10 md:p-20 lg:gap-20">
         <div className="flex flex-col gap-3">
           <p className="text-xs">Services I Offer to my Clients</p>
-          <h1 className="text-3xl font-bold">
-            My Best{" "}
+          <h2 className="text-3xl font-bold">
+            My 
             <TextGradient color="from-indigo-500 to-purple-500">
               Services
             </TextGradient>
-          </h1>
+          </h2>
         </div>
 
         {/* CONTENT */}
@@ -342,12 +342,12 @@ const Home = () => (
         <div className="flex flex-1 flex-col gap-10">
           <div className="flex flex-col gap-3">
             <p className="text-xs">Get in touch</p>
-            <h1 className="text-3xl font-bold">
+            <h2 className="text-3xl font-bold">
               Available for{" "}
               <TextGradient color="from-indigo-500 to-purple-500">
                 Freelance Opportunities
               </TextGradient>
-            </h1>
+            </h2>
           </div>
           <div className="flex-1 ">
             <p className="w-full max-w-xl font-extralight">

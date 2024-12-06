@@ -4,7 +4,7 @@ import SVG from "react-inlinesvg";
 import { BiBriefcase } from "react-icons/bi";
 
 const Footer = () => (
-  <div className="xs:p-10 xs:pb-7 xs:gap-7 flex flex-col items-center justify-center gap-5 border-t border-white/50 bg-gradient-to-r from-violet-600 via-indigo-500 to-indigo-600 p-5">
+  <footer className="xs:p-10 xs:pb-7 xs:gap-7 flex flex-col items-center justify-center gap-5 border-t border-white/50 bg-gradient-to-r from-violet-600 via-indigo-500 to-indigo-600 p-5">
     <div className="xs:gap-10 grid grid-cols-2 gap-5 sm:grid-cols-4">
       <div className="flex flex-1 flex-col gap-2">
         <div className="text-sm font-bold">ABOUT ME</div>
@@ -80,7 +80,7 @@ const Footer = () => (
             +358 40 7676 993
           </Link>
           <Link
-            href="https://www.finder.fi/"
+            href="https://www.finder.fi/IT-konsultointi+IT-palvelut/Stjernberg+Web+and+IT+Services/Pori/yhteystiedot/4133278"
             className="flex w-fit cursor-pointer items-center gap-1 hover:underline"
           >
             <BiBriefcase className="min-h-4 min-w-4" />
@@ -95,7 +95,7 @@ const Footer = () => (
       Built with Passion & Commitment in Next.js © 2024 Stjernberg Web and IT
       Services
     </div>
-  </div>
+  </footer>
 );
 
 export default Footer;

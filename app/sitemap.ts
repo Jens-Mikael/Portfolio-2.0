@@ -3,6 +3,7 @@ export default async function sitemap() {
     {
       url: "https://stjernberg.dev",
       lastModified: new Date(),
+      priority: 1,
     },
   ];
 }
