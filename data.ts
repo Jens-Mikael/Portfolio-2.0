@@ -239,12 +239,12 @@ export const testimonialsData = [
     pfpSrc: HannuValvePfp,
     link: "https://www.linkedin.com/in/hannuvalve/",
   },
-  // {
-  //   quote:
-  //     "Working with Jens was a fantastic experience—they were detail-oriented, proactive in solving challenges, and ensured smooth communication throughout. Their dedication and commitment made the entire project seamless and enjoyable.",
-  //   name: "Harri Vaelilae",
-  //   title: "CEO of OnePointCode",
-  //   pfpSrc: HarvaliPfp,
-  //   link: "https://www.linkedin.com/in/harvali/",
-  // },
+  {
+    quote:
+      "An exceptional freelancer! Jens is extremely skilled and quick at coding, with a remarkable ability to learn and adapt. He consistently provides valuable suggestions that have greatly benefited our projects. Jens has a solid understanding of modern standards and works seamlessly within them. His cheerful, proactive, and clever approach makes collaboration effortless and enjoyable. Highly recommended!",
+    name: "Harri Vaelilae",
+    title: "CEO of OnePointCode",
+    pfpSrc: HarvaliPfp,
+    link: "https://www.linkedin.com/in/harvali/",
+  },
 ];
