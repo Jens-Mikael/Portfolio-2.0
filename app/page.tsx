@@ -92,6 +92,7 @@ const Home = () => (
                 <Image
                   alt={skill.alt}
                   fill
+                  title={skill.alt}
                   sizes="(max-width: 32px)"
                   className="object-contain"
                   src={`/skills/icons/${skill.src}`}
