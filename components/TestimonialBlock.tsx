@@ -30,7 +30,7 @@ export default function TestimonialBlock({
           <p className="text-xs italic text-white/70">{testimonial.title} </p>
         </div>
         <div className="relative aspect-square min-h-16 min-w-16 overflow-hidden rounded-full">
-          <Image src={testimonial.pfpSrc} fill alt="pfp" />
+          <Image src={testimonial.pfpSrc} fill alt="pfp" sizes="(max-width: 64px)" />
         </div>
       </div>
     </div>

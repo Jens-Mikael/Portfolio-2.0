@@ -5,5 +5,10 @@ export default async function sitemap() {
       lastModified: new Date(),
       priority: 1,
     },
+    {
+      url: "https://stjernberg.dev/CV.pdf",
+      lastModified: new Date(),
+      priority: 0.9,
+    },
   ];
 }

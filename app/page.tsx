@@ -82,19 +82,21 @@ const Home = () => (
             {" </>"}
           </TextGradient>
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-2">
+        <div className="flex max-w-xl flex-wrap items-center justify-center gap-2">
           {skillsData.map((skill, i) => (
             <div
               key={i}
-              className="flex items-center rounded-full bg-white/10 p-2 shadow-2xl "
+              className="relative flex h-10 w-10 items-center rounded-full bg-white/10 p-2 shadow-2xl"
             >
-              <Image
-                alt="sk"
-                height={20}
-                width={20}
-                className="min-h-5 min-w-5"
-                src={`/skills/${skill.src}`}
-              />
+              <div className="relative size-full">
+                <Image
+                  alt={skill.alt}
+                  fill
+                  sizes="(max-width: 32px)"
+                  className="object-contain"
+                  src={`/skills/icons/${skill.src}`}
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -167,8 +169,8 @@ const Home = () => (
             </TextGradient>
           </div>
         </div>
-{/* xl:grid-cols-3 */}
-        <div className="relative grid w-full gap-10  overflow-hidden rounded-2xl bg-[#100d25] p-5 lg:grid-cols-2 md:p-10 "> 
+        {/* xl:grid-cols-3 */}
+        <div className="relative grid w-full gap-10  overflow-hidden rounded-2xl bg-[#100d25] p-5 md:p-10 lg:grid-cols-2 ">
           {testimonialsData.map((obj, i) => (
             <TestimonialBlock key={i} testimonial={obj} />
           ))}
@@ -218,10 +220,13 @@ const Home = () => (
               <TextGradient color="from-indigo-500 to-purple-500">
                 {"<> "}
               </TextGradient>
-              {aboutData.longDesc1}
+              {aboutData.longDesc[0]}
               <br />
               <br />
-              {aboutData.longDesc2}
+              {aboutData.longDesc[1]}
+              <br />
+              <br />
+              {aboutData.longDesc[2]}
               <TextGradient color="from-indigo-500 to-purple-500">
                 {" </>"}
               </TextGradient>
@@ -274,13 +279,14 @@ const Home = () => (
             </div>
           </div>
         </div>
-        <Link download href="/Jens-Mikael_Stjernberg_CV.pdf">
+        <Link href="/CV.pdf" target="_blank">
           <GradientButton>
             Download CV{" "}
             <Image
               src="/svg/arrow.svg"
-              alt="ar"
+              alt="arrow"
               height={20}
+              
               width={20}
               className="rotate-90 transition-transform group-hover:translate-y-1"
             />
@@ -304,7 +310,7 @@ const Home = () => (
         <div className="flex flex-col gap-3">
           <p className="text-xs">Services I Offer to my Clients</p>
           <h2 className="text-3xl font-bold">
-            My 
+            My
             <TextGradient color="from-indigo-500 to-purple-500">
               Services
             </TextGradient>

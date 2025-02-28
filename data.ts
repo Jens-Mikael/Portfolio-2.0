@@ -10,7 +10,6 @@ import DanSveenPfp from "./public/testimonials/dsveen.webp";
 import HannuValvePfp from "./public/testimonials/hannuValve.png";
 import HarvaliPfp from "./public/testimonials/harriVaelilae.png";
 
-
 export const projectsData = [
   {
     img: "/projects/language-master.png",
@@ -154,13 +153,39 @@ export const projectsData_2 = [
 ];
 
 export const skillsData = [
-  { src: "reactjs-icon.svg" },
-  { src: "next-js.svg" },
-  { src: "tailwindcss-icon.svg" },
-  { src: "nextauth.png" },
-  { src: "firebase-icon.svg" },
-  { src: "drizzle-orm.png" },
-  { src: "postgresql.svg" },
+  // Programming Languages
+  { src: "typescript.png", alt: "TypeScript Programming Language" },
+  { src: "javascript.png", alt: "JavaScript Programming Language" },
+  { src: "python.webp", alt: "Python Programming Language" },
+  { src: "go.png", alt: "Go Programming Language" },
+
+  // Frontend Frameworks & Libraries
+  { src: "reactjs.svg", alt: "React JavaScript Library" },
+  { src: "nextjs.svg", alt: "Next.js Framework" },
+  { src: "tailwindcss.svg", alt: "Tailwind CSS Framework" },
+
+  // Backend & API
+  { src: "nodejs.svg.png", alt: "Node.js Runtime" },
+  { src: "express.svg", alt: "Express.js Framework" },
+  { src: "nestjs.png", alt: "NestJS Framework" },
+  { src: "graphql.webp", alt: "GraphQL Query Language" },
+  { src: "matrix-sdk.png", alt: "Matrix SDK" },
+
+  // Databases & ORM
+  { src: "postgresql.svg", alt: "PostgreSQL Database" },
+  { src: "mongodb.svg", alt: "MongoDB Database" },
+  { src: "drizzle.png", alt: "Drizzle ORM" },
+
+  // Authentication & Security
+  { src: "nextauth.png", alt: "NextAuth Authentication" },
+  { src: "firebase.svg", alt: "Firebase Platform" },
+
+  // Cloud & DevOps
+  { src: "aws.png", alt: "Amazon Web Services" },
+  { src: "gcp.png", alt: "Google Cloud Platform" },
+  { src: "cloudflare.png", alt: "Cloudflare Services" },
+  { src: "docker.png", alt: "Docker Containerization" },
+  { src: "git.svg.png", alt: "Git Version Control" },
 ];
 
 export const servicesData = [
@@ -183,11 +208,12 @@ export const servicesData = [
 
 export const aboutData = {
   shortDesc:
-    "I'm software developer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
-  longDesc1:
-    "I'm 17 years old and speak English, Swedish, Finnish, and Norwegian fluently, and also a bit of German. I have been programming for around 4 years now. I initially began with game development using Pygame in Python, but afterward, I gravitated more toward web development and have been passionate ever since about building beautiful web applications with TypeScript and Tailwind in Next.js. Recently, however, I have been focusing more on the architecture of web apps and striving to enhance the performance between the client and backend in the most secure way. I've started learning about databases and authentication with Firebase, SQL databases with DrizzleORM, and OAuth services.",
-  longDesc2:
-    "Despite being in high school, I mostly spend my free time programming and playing music. I also highly value health, so when I'm not in front of the computer or with my guitar, I go to the gym and train until I can't lift my arms anymore. Either way, I love learning and having fun solving problems, which is why I believe I could be a great developer for your business.",
+    "I'm software engineer who specializes in building the web. I'm looking forward to develop my skills in the field and contributing to meaningful projects. ",
+  longDesc: [
+    "I'm 17 years old and speak English, Swedish, Finnish, and Norwegian fluently, and German. I have been programming for around 4 years now. I initially began with game development using Pygame in Python but afterwards, I gravitated more towards web development and have been passionate ever since about building beautiful web applications with TypeScript and Tailwind in Nextjs.",
+    "Recently, however I have been focusing more on the architecture of web apps and striving to enhance the performance between the client and backend in the most secure way. I've began looking more into the business aspect of web apps and how to make them more profitable and user friendly. My ultimate goal is to make the most out of my skills and knowledge to create a successful business and bring the ideas into reality. When I discover a problem or a lack of knowledge, I always thrive to learn more about it and solve it with the best possible solution.",
+    "Outisde tech, I mostly spend my free time learning new things and creating music. I also highly value health, so when I'm not in front of the computer or with my guitar, I go to the gym and train until I can't lift my arms anymore. Either way, I love learning and having fun solving problems, which is why I believe I could be a great developer for your business.",
+  ],
 };
 
 export const CVData = {
@@ -195,29 +221,29 @@ export const CVData = {
     {
       title: "High School - BJSS",
       date: "2023 - Now",
-      desc: "Currently in my second year of Pori's Swedish high school.",
+      desc: "Currently in my second year in Pori's Swedish high school studying Mathematics and Physics.",
     },
     {
       title: "Primary School - BJSS",
       date: "2014 - 2023",
-      desc: "Finished primary school in Pori with a 9.8 certificate from a scale 4-10.",
+      desc: "Finished primary school with a 9.8 certificate. (10 max)",
     },
   ],
   experience: [
     {
-      title: "Freelancer - Self Employed",
-      date: "2023 - Now",
-      desc: "I have been working with numerous client and collaborated with passionate software engineers in the industry. ",
+      title: "Frontend Developer - OnePointCode",
+      date: "2024 - Now",
+      desc: "I've have been the lead frontend developer for OnePointCode for a year now and have been responsible for the frontend of the website with contributions to the backend as well.",
     },
     {
-      title: "Shop Employee - SOK",
-      date: "2023 - 2023",
-      desc: "A two week long summer job period at my local grocery store.",
+      title: "Lead Software Engineer - Hansatorin Apteekki",
+      date: "2024 - 2025",
+      desc: "I built a whole website for a pharmacy located in Turku, with the goal of increasing sales and providing a better user experience for the customers.",
     },
     {
-      title: "Shop Employee - SOK",
-      date: "2022 - 2022",
-      desc: "A two week on-the-job learning period at my local grocery store in Pori.",
+      title: "Lead Backend Developer - Roof History",
+      date: "2024 - 2024",
+      desc: "I desgined and developed the whole backend for a complex roof assessment start-up.",
     },
   ],
 };
