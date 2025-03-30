@@ -157,15 +157,15 @@ export const skillsData = [
   { src: "typescript.png", alt: "TypeScript Programming Language" },
   { src: "javascript.png", alt: "JavaScript Programming Language" },
   { src: "python.webp", alt: "Python Programming Language" },
-  { src: "go.png", alt: "Go Programming Language" },
+  // { src: "go.png", alt: "Go Programming Language" },
 
   // Frontend Frameworks & Libraries
   { src: "reactjs.svg", alt: "React JavaScript Library" },
   { src: "nextjs.svg", alt: "Next.js Framework" },
-  { src: "tailwindcss.svg", alt: "Tailwind CSS Framework" },
+  // { src: "tailwindcss.svg", alt: "Tailwind CSS Framework" },
 
   // Backend & API
-  { src: "nodejs.svg.png", alt: "Node.js Runtime" },
+  // { src: "nodejs.svg.png", alt: "Node.js Runtime" },
   { src: "express.svg", alt: "Express.js Framework" },
   { src: "nestjs.png", alt: "NestJS Framework" },
   { src: "graphql.webp", alt: "GraphQL Query Language" },
@@ -174,18 +174,18 @@ export const skillsData = [
   // Databases & ORM
   { src: "postgresql.svg", alt: "PostgreSQL Database" },
   { src: "mongodb.svg", alt: "MongoDB Database" },
-  { src: "drizzle.png", alt: "Drizzle ORM" },
+  // { src: "drizzle.png", alt: "Drizzle ORM" },
 
   // Authentication & Security
-  { src: "nextauth.png", alt: "NextAuth Authentication" },
-  { src: "firebase.svg", alt: "Firebase Platform" },
+  // { src: "nextauth.png", alt: "NextAuth Authentication" },
+  // { src: "firebase.svg", alt: "Firebase Platform" },
 
   // Cloud & DevOps
   { src: "aws.png", alt: "Amazon Web Services" },
   { src: "gcp.png", alt: "Google Cloud Platform" },
-  { src: "cloudflare.png", alt: "Cloudflare Services" },
+  // { src: "cloudflare.png", alt: "Cloudflare Services" },
   { src: "docker.png", alt: "Docker Containerization" },
-  { src: "git.svg.png", alt: "Git Version Control" },
+  // { src: "git.svg.png", alt: "Git Version Control" },
 ];
 
 export const servicesData = [

@@ -343,7 +343,7 @@ const Home = () => (
     {/* ___________ */}
     {/* CONTACT */}
     {/* ___________ */}
-    <div id="contact" className="flex flex-col gap-16">
+    <div id="contact" className="flex flex-col gap-16 relative">
       <Starfield />
       <div className="flex flex-1 flex-col gap-16 p-5 sm:p-10 md:p-20 lg:flex-row">
         <div className="flex flex-1 flex-col gap-10">

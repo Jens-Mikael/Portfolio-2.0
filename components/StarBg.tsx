@@ -147,7 +147,7 @@ export default function Starfield(props: Props) {
       style={{
         padding: 0,
         margin: 0,
-        height: "100vh",
+        height: "100%",
         width: "100%",
         position: "absolute",
         zIndex: -1,
